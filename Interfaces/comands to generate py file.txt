@@ -1,0 +1,6 @@
+pyuic5 -x ROI_add_label_window_dark.ui -o add_label_window.py
+pyuic5 -x save_windows_dark.ui -o save_ok__window.py
+pyuic5 -x upload_video_window_dark.ui -o upload_video.py
+pyuic5 -x save_multiple_ROI_dark.ui -o compose_ROI_save_window.py
+pyuic5 -x 360RAT_windows_dark.ui -o Anottation_window.py
+pyuic5 -x ROI_label_window_dark.ui -o ROI_save__window.py

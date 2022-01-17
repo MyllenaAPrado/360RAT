@@ -35,6 +35,12 @@
 * [Matplotlib](https://matplotlib.org/stable/users/installing.html)
 
        pip install -U matplotlib
+
+* [Numpy](https://numpy.org/install/)
+
+       pip install numpy
+
+
        
 # TIP
 

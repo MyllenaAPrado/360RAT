@@ -1,6 +1,7 @@
-# ![Image](https://gitlab.com/gpds-unb/360rat/-/blob/main/Images/360RAT_logo.png?raw=true) 360RAT - 360 - ROI Annotator Tool
+# <img src="./Images/360RAT_logo.png" alt="drawing" width="100"/> 360RAT - 360 - ROI Annotator Tool
 
-![Image](https://gitlab.com/gpds-unb/360rat/-/blob/main/Images/PrincipalWindow.PNG?raw=true)
+
+![Image](./Images/PrincipalWindow.PNG?raw=true)
 
 * Tool to annotate spatially regions of interest for omnidirectional visual data in EPR.
 * Developed using [Equirectangular-toolbox](https://github.com/NitishMutha/equirectangular-toolbox), [OpenCV](https://pypi.org/project/opencv-python/), [PyQt5 5.15.4](https://pypi.org/project/PyQt5/), and [python 3.9.5](https://www.python.org/).

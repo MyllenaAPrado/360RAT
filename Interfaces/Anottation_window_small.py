@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '360RAT_windows_darka.ui'
+# Form implementation generated from reading ui file '360RAT_windows_dark_small.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Anottation(object):
     def setupUi(self, Anottation):
         Anottation.setObjectName("Anottation")
-        Anottation.resize(1119, 825)
+        Anottation.resize(1877, 986)
         Anottation.setLayoutDirection(QtCore.Qt.LeftToRight)
         Anottation.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(42, 44, 111, 255), stop:0.315789 rgba(28, 29, 73, 255));\n"
 "color:rgb(255,255,255);\n"
@@ -22,7 +22,7 @@ class Ui_Anottation(object):
         self.window = QtWidgets.QWidget(Anottation)
         self.window.setObjectName("window")
         self.horizontalLayoutWidget_6 = QtWidgets.QWidget(self.window)
-        self.horizontalLayoutWidget_6.setGeometry(QtCore.QRect(0, 0, 1131, 801))
+        self.horizontalLayoutWidget_6.setGeometry(QtCore.QRect(0, 0, 1872, 951))
         self.horizontalLayoutWidget_6.setObjectName("horizontalLayoutWidget_6")
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_6)
         self.horizontalLayout_8.setSizeConstraint(QtWidgets.QLayout.SetMinAndMaxSize)
@@ -75,7 +75,7 @@ class Ui_Anottation(object):
         sizePolicy.setHeightForWidth(self.equi_image.sizePolicy().hasHeightForWidth())
         self.equi_image.setSizePolicy(sizePolicy)
         self.equi_image.setMinimumSize(QtCore.QSize(750, 250))
-        self.equi_image.setMaximumSize(QtCore.QSize(1800, 540))
+        self.equi_image.setMaximumSize(QtCore.QSize(1800, 900))
         font = QtGui.QFont()
         font.setPointSize(10)
         self.equi_image.setFont(font)
@@ -118,7 +118,8 @@ class Ui_Anottation(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.slider_video_duration.sizePolicy().hasHeightForWidth())
         self.slider_video_duration.setSizePolicy(sizePolicy)
-        self.slider_video_duration.setMinimumSize(QtCore.QSize(400, 30))
+        self.slider_video_duration.setMinimumSize(QtCore.QSize(399, 30))
+        self.slider_video_duration.setMaximumSize(QtCore.QSize(1031, 16777215))
         self.slider_video_duration.setStyleSheet("background-color: none;")
         self.slider_video_duration.setOrientation(QtCore.Qt.Horizontal)
         self.slider_video_duration.setObjectName("slider_video_duration")
@@ -207,7 +208,7 @@ class Ui_Anottation(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.text_nfov_information.sizePolicy().hasHeightForWidth())
         self.text_nfov_information.setSizePolicy(sizePolicy)
-        self.text_nfov_information.setMaximumSize(QtCore.QSize(300, 80))
+        self.text_nfov_information.setMaximumSize(QtCore.QSize(500, 80))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
@@ -272,7 +273,7 @@ class Ui_Anottation(object):
         self.horizontalLayout_6.addLayout(self.verticalLayout_2)
         self.scroll_area_ROI = QtWidgets.QScrollArea(self.horizontalLayoutWidget_6)
         self.scroll_area_ROI.setMinimumSize(QtCore.QSize(70, 50))
-        self.scroll_area_ROI.setMaximumSize(QtCore.QSize(300, 200))
+        self.scroll_area_ROI.setMaximumSize(QtCore.QSize(451, 200))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.scroll_area_ROI.setFont(font)
@@ -280,12 +281,12 @@ class Ui_Anottation(object):
         self.scroll_area_ROI.setWidgetResizable(True)
         self.scroll_area_ROI.setObjectName("scroll_area_ROI")
         self.scroll_area_ROI_contents = QtWidgets.QWidget()
-        self.scroll_area_ROI_contents.setGeometry(QtCore.QRect(0, 0, 227, 121))
+        self.scroll_area_ROI_contents.setGeometry(QtCore.QRect(0, 0, 449, 86))
         self.scroll_area_ROI_contents.setObjectName("scroll_area_ROI_contents")
         self.scroll_area_ROI.setWidget(self.scroll_area_ROI_contents)
         self.horizontalLayout_6.addWidget(self.scroll_area_ROI)
         self.scroll_area_compose_ROI = QtWidgets.QScrollArea(self.horizontalLayoutWidget_6)
-        self.scroll_area_compose_ROI.setMaximumSize(QtCore.QSize(300, 200))
+        self.scroll_area_compose_ROI.setMaximumSize(QtCore.QSize(451, 200))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.scroll_area_compose_ROI.setFont(font)
@@ -293,7 +294,7 @@ class Ui_Anottation(object):
         self.scroll_area_compose_ROI.setWidgetResizable(True)
         self.scroll_area_compose_ROI.setObjectName("scroll_area_compose_ROI")
         self.scroll_area_ROI_contents_2 = QtWidgets.QWidget()
-        self.scroll_area_ROI_contents_2.setGeometry(QtCore.QRect(0, 0, 226, 121))
+        self.scroll_area_ROI_contents_2.setGeometry(QtCore.QRect(0, 0, 449, 86))
         self.scroll_area_ROI_contents_2.setObjectName("scroll_area_ROI_contents_2")
         self.scroll_area_compose_ROI.setWidget(self.scroll_area_ROI_contents_2)
         self.horizontalLayout_6.addWidget(self.scroll_area_compose_ROI)
@@ -325,7 +326,7 @@ class Ui_Anottation(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.perspective_image.sizePolicy().hasHeightForWidth())
         self.perspective_image.setSizePolicy(sizePolicy)
-        self.perspective_image.setMinimumSize(QtCore.QSize(300, 300))
+        self.perspective_image.setMinimumSize(QtCore.QSize(200, 200))
         self.perspective_image.setMaximumSize(QtCore.QSize(400, 400))
         self.perspective_image.setStyleSheet("background-color: rgb(28, 29, 73);")
         self.perspective_image.setText("")
@@ -643,7 +644,7 @@ class Ui_Anottation(object):
         self.horizontalLayout_8.addLayout(self.verticalLayout)
         Anottation.setCentralWidget(self.window)
         self.menubar = QtWidgets.QMenuBar(Anottation)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1119, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1877, 26))
         self.menubar.setObjectName("menubar")
         self.menuUpload = QtWidgets.QMenu(self.menubar)
         self.menuUpload.setObjectName("menuUpload")

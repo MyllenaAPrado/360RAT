@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>936</width>
-    <height>721</height>
+    <width>1877</width>
+    <height>986</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,8 +27,8 @@ border-color: rgb(44, 0, 66);</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>931</width>
-      <height>691</height>
+      <width>1872</width>
+      <height>951</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -54,33 +54,6 @@ border-color: rgb(44, 0, 66);</string>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_7">
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="minimumSize">
-            <size>
-             <width>600</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Comic Sans MS</family>
-             <pointsize>16</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color:none;</string>
-           </property>
-           <property name="text">
-            <string>Equirectangular View</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
          <item>
           <widget class="QPushButton" name="button_go_to_first">
            <property name="minimumSize">
@@ -129,6 +102,33 @@ border-color: rgb(44, 0, 66);</string>
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="minimumSize">
+            <size>
+             <width>600</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Comic Sans MS</family>
+             <pointsize>16</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:none;</string>
+           </property>
+           <property name="text">
+            <string>Equirectangular View</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>
@@ -141,14 +141,14 @@ border-color: rgb(44, 0, 66);</string>
          </property>
          <property name="minimumSize">
           <size>
-           <width>500</width>
-           <height>500</height>
+           <width>750</width>
+           <height>250</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>1800</width>
-           <height>540</height>
+           <height>900</height>
           </size>
          </property>
          <property name="font">
@@ -220,8 +220,14 @@ border-color: rgb(44, 0, 66);</string>
              </property>
              <property name="minimumSize">
               <size>
-               <width>0</width>
+               <width>399</width>
                <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>1031</width>
+               <height>16777215</height>
               </size>
              </property>
              <property name="styleSheet">
@@ -242,13 +248,13 @@ border-color: rgb(44, 0, 66);</string>
              </property>
              <property name="minimumSize">
               <size>
-               <width>15</width>
+               <width>25</width>
                <height>25</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>10</width>
+               <width>20</width>
                <height>25</height>
               </size>
              </property>
@@ -286,6 +292,18 @@ border-color: rgb(44, 0, 66);</string>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="minimumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>30</height>
+                </size>
+               </property>
                <property name="font">
                 <font>
                  <family>Arial</family>
@@ -312,6 +330,18 @@ border-color: rgb(44, 0, 66);</string>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="minimumSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>30</height>
+                </size>
+               </property>
                <property name="font">
                 <font>
                  <family>Arial</family>
@@ -329,10 +359,16 @@ border-color: rgb(44, 0, 66);</string>
              </item>
              <item>
               <widget class="QLabel" name="text_frame_number">
+               <property name="minimumSize">
+                <size>
+                 <width>25</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="maximumSize">
                 <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
+                 <width>40</width>
+                 <height>30</height>
                 </size>
                </property>
                <property name="sizeIncrement">
@@ -377,7 +413,7 @@ border-color: rgb(44, 0, 66);</string>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>16777215</width>
+                 <width>500</width>
                  <height>80</height>
                 </size>
                </property>
@@ -505,7 +541,7 @@ border-color: rgb(44, 0, 66);</string>
              </property>
              <property name="maximumSize">
               <size>
-               <width>300</width>
+               <width>451</width>
                <height>200</height>
               </size>
              </property>
@@ -525,8 +561,8 @@ border-color: rgb(44, 0, 66);</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>183</width>
-                <height>83</height>
+                <width>449</width>
+                <height>86</height>
                </rect>
               </property>
              </widget>
@@ -536,7 +572,7 @@ border-color: rgb(44, 0, 66);</string>
             <widget class="QScrollArea" name="scroll_area_compose_ROI">
              <property name="maximumSize">
               <size>
-               <width>300</width>
+               <width>451</width>
                <height>200</height>
               </size>
              </property>
@@ -556,8 +592,8 @@ border-color: rgb(44, 0, 66);</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>182</width>
-                <height>83</height>
+                <width>449</width>
+                <height>86</height>
                </rect>
               </property>
              </widget>
@@ -635,8 +671,8 @@ border-color: rgb(44, 0, 66);</string>
          </property>
          <property name="minimumSize">
           <size>
-           <width>100</width>
-           <height>100</height>
+           <width>200</width>
+           <height>200</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -660,7 +696,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>100</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -700,7 +736,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>30</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -725,7 +761,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>30</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -750,7 +786,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>45</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -778,7 +814,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>50</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -806,7 +842,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>100</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -853,7 +889,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>45</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -881,7 +917,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>100</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -924,7 +960,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>45</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -952,7 +988,7 @@ border-color: rgb(44, 0, 66);</string>
            <property name="minimumSize">
             <size>
              <width>100</width>
-             <height>25</height>
+             <height>15</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -1356,8 +1392,8 @@ border-color: rgb(44, 0, 66);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>936</width>
-     <height>21</height>
+     <width>1877</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuUpload">

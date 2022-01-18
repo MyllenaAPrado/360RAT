@@ -839,7 +839,7 @@ def main():
     app = QtWidgets.QApplication([])
     widget = AnottationWindow()
     #widget.showMaximized()
-    widget.show()
+    widget.showMinimized()
     app.exec_()
 
 if __name__ == "__main__":

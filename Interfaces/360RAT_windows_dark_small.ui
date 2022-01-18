@@ -56,10 +56,22 @@ border-color: rgb(44, 0, 66);</string>
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
           <widget class="QPushButton" name="button_go_to_first">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>80</width>
              <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>16777215</height>
             </size>
            </property>
            <property name="font">
@@ -80,10 +92,22 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item>
           <widget class="QPushButton" name="button_go_to_last">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>80</width>
              <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>16777215</height>
             </size>
            </property>
            <property name="font">
@@ -104,6 +128,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item>
           <widget class="QLabel" name="label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>600</width>
@@ -170,6 +200,12 @@ border-color: rgb(44, 0, 66);</string>
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
             <widget class="QPushButton" name="button_play_video">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Arial</family>
@@ -213,7 +249,7 @@ border-color: rgb(44, 0, 66);</string>
            <item>
             <widget class="QSlider" name="slider_video_duration">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -287,7 +323,7 @@ border-color: rgb(44, 0, 66);</string>
              <item>
               <widget class="QPushButton" name="button_previous">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
@@ -325,7 +361,7 @@ border-color: rgb(44, 0, 66);</string>
              <item>
               <widget class="QPushButton" name="button_next">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
@@ -359,6 +395,12 @@ border-color: rgb(44, 0, 66);</string>
              </item>
              <item>
               <widget class="QLabel" name="text_frame_number">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="minimumSize">
                 <size>
                  <width>25</width>
@@ -440,7 +482,7 @@ border-color: rgb(44, 0, 66);</string>
                <item>
                 <widget class="QPushButton" name="button_set_init_CROI">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -470,7 +512,7 @@ border-color: rgb(44, 0, 66);</string>
                <item>
                 <widget class="QPushButton" name="button_edit_long_CROI">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -500,7 +542,7 @@ border-color: rgb(44, 0, 66);</string>
                <item>
                 <widget class="QPushButton" name="button_save_CROI">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -627,6 +669,12 @@ border-color: rgb(44, 0, 66);</string>
        </property>
        <item>
         <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>200</width>
@@ -693,6 +741,12 @@ border-color: rgb(44, 0, 66);</string>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="2" column="2">
           <widget class="QSlider" name="slider_fov_h">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -733,6 +787,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="1" column="1">
           <widget class="QLineEdit" name="input_ROI_W">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>30</width>
@@ -758,6 +818,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="2" column="1">
           <widget class="QLineEdit" name="input_ROI_H">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>30</width>
@@ -783,6 +849,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>45</width>
@@ -811,6 +883,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>50</width>
@@ -839,6 +917,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="1" column="2">
           <widget class="QSlider" name="slider_fov_w">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -886,6 +970,12 @@ border-color: rgb(44, 0, 66);</string>
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
           <widget class="QLabel" name="label_6">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>45</width>
@@ -914,6 +1004,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="0" column="1">
           <widget class="QSlider" name="slider_pos_x">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -957,6 +1053,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>45</width>
@@ -985,6 +1087,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="1" column="1">
           <widget class="QSlider" name="slider_pos_y">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -1027,6 +1135,12 @@ border-color: rgb(44, 0, 66);</string>
        </item>
        <item>
         <widget class="QLabel" name="label_15">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>200</width>
@@ -1065,6 +1179,12 @@ border-color: rgb(44, 0, 66);</string>
          </property>
          <item row="0" column="1">
           <widget class="QPushButton" name="button_end_ROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
              <width>1</width>
@@ -1089,6 +1209,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="5" column="1">
           <widget class="QPushButton" name="button_delete_compose_ROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1107,6 +1233,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="button_edit_one_compose_ROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1125,6 +1257,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="3" column="0">
           <widget class="QPushButton" name="button_add_compose_roi">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1143,6 +1281,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="5" column="0">
           <widget class="QPushButton" name="button_cancel_edit_compose_ROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1161,6 +1305,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="0" column="0">
           <widget class="QPushButton" name="button_init_ROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1179,6 +1329,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="3" column="1">
           <widget class="QPushButton" name="button_save_add_ROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1197,6 +1353,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="1" column="1">
           <widget class="QPushButton" name="button_save_edit_compose_ROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1215,6 +1377,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="2" column="0">
           <widget class="QPushButton" name="button_add_new_CROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1234,6 +1402,12 @@ border-color: rgb(44, 0, 66);</string>
          </item>
          <item row="2" column="1">
           <widget class="QPushButton" name="button_set_new_CROI">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="font">
             <font>
              <family>Arial</family>
@@ -1255,6 +1429,12 @@ border-color: rgb(44, 0, 66);</string>
        </item>
        <item>
         <widget class="QLabel" name="label_16">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>200</width>
@@ -1286,6 +1466,12 @@ border-color: rgb(44, 0, 66);</string>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
            <item>
             <widget class="QPushButton" name="button_edit_ROI">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Arial</family>
@@ -1304,6 +1490,12 @@ border-color: rgb(44, 0, 66);</string>
            </item>
            <item>
             <widget class="QPushButton" name="button_save_edit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Arial</family>
@@ -1322,6 +1514,12 @@ border-color: rgb(44, 0, 66);</string>
            </item>
            <item>
             <widget class="QPushButton" name="button_cancel_edit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Arial</family>
@@ -1344,6 +1542,12 @@ border-color: rgb(44, 0, 66);</string>
           <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
             <widget class="QPushButton" name="button_save_ROI">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Arial</family>
@@ -1362,6 +1566,12 @@ border-color: rgb(44, 0, 66);</string>
            </item>
            <item>
             <widget class="QPushButton" name="button_delete_ROI">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Arial</family>

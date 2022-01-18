@@ -1,5 +1,5 @@
 #!/bin/python3
-from Interfaces.Anottation_window import Ui_Anottation
+from Interfaces.Anottation_window_small import Ui_Anottation
 from Interfaces.ROI_save__window import Ui_SaveROI
 from Interfaces.compose_ROI_save_window import Ui_SaveComposeROI
 from Interfaces.save_ok__window import Ui_save
@@ -838,7 +838,6 @@ class AnottationWindow(QtWidgets.QMainWindow):
 def main():
     app = QtWidgets.QApplication([])
     widget = AnottationWindow()
-    #widget.showMaximized()
     widget.show()
     app.exec_()
 

@@ -1,5 +1,6 @@
 #!/bin/python3
 from Interfaces.Anottation_window import Ui_Anottation
+from Interfaces.Anottation_window_small import Ui_Anottation_small
 from Interfaces.ROI_save__window import Ui_SaveROI
 from Interfaces.compose_ROI_save_window import Ui_SaveComposeROI
 from Interfaces.save_ok__window import Ui_save
@@ -31,13 +32,17 @@ import csv
 import sys
 import cv2
 import os.path as osp
+import argparse
 
 class AnottationWindow(QtWidgets.QMainWindow):
 
-    def __init__ (self, *args, **kwargs):
+    def __init__ (self, small_window, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.ui = Ui_Anottation()
+        if small_window == 'y':
+            self.ui = Ui_Anottation_small()
+        else:
+            self.ui = Ui_Anottation()
         self.ui.setupUi(self)
         if platform == "linux" or platform == "linux2":
             # linux
@@ -835,15 +840,22 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.window_upload_result.show()
 
 
-def main():
+def main(args):
     app = QtWidgets.QApplication([])
-    widget = AnottationWindow()
-    #widget.showMaximized()
-    widget.showMinimized()
+    if args.s:
+        widget = AnottationWindow('y')
+    else:
+        widget = AnottationWindow('n')
+    widget.show()
     app.exec_()
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-v", "--verbose")
+    parser.add_argument("-s", type=str, help="Choose small window[y/n]")
+    args = parser.parse_args()
+    main(args)
 
 
 

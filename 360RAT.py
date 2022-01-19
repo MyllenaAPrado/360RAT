@@ -507,7 +507,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
         
         
         nfov_information = (" Actual ROI: "+
-                            f'\n          Field of View ~= width:{ang_W :.2f} | height{ang_H :.2f}' +
+                            #f'\n          Field of View ~= width:{ang_W :.2f} | height{ang_H :.2f}' +
                             f'\n          ROI ~= W:{self.nfov.FOV[0] :.2f} | H{self.nfov.FOV[1] :.2f}' +
                             "\n          Position: X:{:.3f}, Y: {:.3f}".format(self.center_point[0], self.center_point[1]))
 
@@ -844,9 +844,10 @@ def main(args):
     app = QtWidgets.QApplication([])
     if args.s:
         widget = AnottationWindow('y')
+        widget.show()
     else:
         widget = AnottationWindow('n')
-    widget.show()
+        widget.showMaximized()
     app.exec_()
 
 if __name__ == "__main__":

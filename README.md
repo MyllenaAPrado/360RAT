@@ -40,6 +40,9 @@
 
        pip install numpy
 
+* [Pillow](https://pypi.org/project/Pillow/)
+
+       pip install Pillow
 
        
 # TIP

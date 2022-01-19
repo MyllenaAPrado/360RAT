@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets, QtGui
 from Interfaces.save_ok__window import Ui_save
+from Service.BlackMask import BlackMask
 from Service.GetInputUser import GetInput
 from sys import platform
 import csv
@@ -106,9 +107,20 @@ class CSV:
             # Windows...
             path = osp.join(cwd, "videosAnotated\{}\{}\{}".format(self.user, tail, "annotation"))
         
-        
         if not os.path.exists(path):
             os.makedirs(path)
+        
+        #create folder blackMask inside folder user
+        if platform == "linux" or platform == "linux2":
+            # linux
+            mask_path = osp.join(cwd, "videosAnotated/{}/{}/{}".format(self.user, tail, "blackMask"))
+
+        elif platform == "win32":
+            # Windows...
+            mask_path = osp.join(cwd, "videosAnotated\{}\{}\{}".format(self.user, tail, "blackMask"))
+        
+        if not os.path.exists(mask_path):
+            os.makedirs(mask_path)      
 
         if platform == "linux" or platform == "linux2":
             # linux
@@ -124,20 +136,24 @@ class CSV:
         height = shape[0] 
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         out_DBSCAN = cv2.VideoWriter(path_video, fourcc, self.fps, (width,height))
+        blackmask = BlackMask()
 
         for image in self.list_image_anotation:
             img_aux = image.get_image().copy()
             if image.get_list_roi():
-                for roi in image.get_list_roi():
+                
+                for roi in image.get_list_roi():                    
                     #draw ROI
                     self.nfov(img_aux)
                     self.nfov.set_fov(roi.get_fov()[1], roi.get_fov()[0])
                     self.nfov.updateNFOV(roi.get_center_point())
 
                     self.nfov.draw_NFOV_edges(img_aux, label_color= self.dict_color[roi.get_label()])
+            
+            
+            mask_out_path = osp.join(mask_path, '{}.jpg'.format(image.get_id()))
+            blackmask.draw_black_mask(mask_out_path, image.get_list_roi(), image.get_list_compose_ROI())
 
-
-                    
             frame_out_path = osp.join(path, '{}.jpg'.format(image.get_id()))
             #save image in directory
             cv2.imwrite(frame_out_path, img_aux)

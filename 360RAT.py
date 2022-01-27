@@ -1,6 +1,5 @@
 #!/bin/python3
 from Interfaces.Anottation_window import Ui_Anottation
-from Interfaces.Anottation_window_small import Ui_Anottation_small
 from Interfaces.ROI_save__window import Ui_SaveROI
 from Interfaces.compose_ROI_save_window import Ui_SaveComposeROI
 from Interfaces.save_ok__window import Ui_save
@@ -36,13 +35,10 @@ import argparse
 
 class AnottationWindow(QtWidgets.QMainWindow):
 
-    def __init__ (self, small_window, *args, **kwargs):
+    def __init__ (self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        if small_window == 'y':
-            self.ui = Ui_Anottation_small()
-        else:
-            self.ui = Ui_Anottation()
+        self.ui = Ui_Anottation()
         self.ui.setupUi(self)
         if platform == "linux" or platform == "linux2":
             # linux
@@ -231,6 +227,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
     #Image
     def upload_image(self):
         self.list_frame.clear()
+        self.controllerComposeROI = ComposeROIController(self.ui)
 
         fname = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', 'c\\', 'Image files ( *.jpg *.png)')
         image_path = fname[0]
@@ -257,6 +254,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
 
         if folder_name !='': 
             self.list_frame.clear()
+            self.controllerComposeROI = ComposeROIController(self.ui)
             list_file_image = [(folder_name + "/" + fn) for fn in os.listdir(folder_name)
                                     if any(fn.endswith(ext) for ext in ['jpg', 'jpeg', 'png'])]
             index = 0
@@ -376,6 +374,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.window_input_FPS.close_window()
  
         self.list_frame.clear()
+        self.controllerComposeROI = ComposeROIController(self.ui)
         self.Scroll_area.clear_scroll_area_compose_ROI()
         self.id_image = 0
         self.ui.button_play_video.setEnabled(True)  
@@ -840,23 +839,14 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.window_upload_result.show()
 
 
-def main(args):
+def main():
     app = QtWidgets.QApplication([])
-    if args.s:
-        widget = AnottationWindow('y')
-        widget.show()
-    else:
-        widget = AnottationWindow('n')
-        widget.showMaximized()
+    widget = AnottationWindow()
+    widget.showMaximized()
     app.exec_()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    group = parser.add_mutually_exclusive_group()
-    group.add_argument("-v", "--verbose")
-    parser.add_argument("-s", type=str, help="Choose small window[y/n]")
-    args = parser.parse_args()
-    main(args)
+    main()
 
 
 

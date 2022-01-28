@@ -282,28 +282,40 @@ class AnottationWindow(QtWidgets.QMainWindow):
             self.window_upload_result.show()
 
     def previous_image(self):
-        self.id_image -= 1
-        self.ui.button_next.setEnabled(True)
+        try: 
+            self.id_image -= 1
+            self.ui.button_next.setEnabled(True)
+            self.ui.button_play_video.setEnabled(True)
 
-        if self.id_image == 0:
-            self.ui.button_previous.setEnabled(False)
-        self.ui.slider_video_duration.blockSignals(True)
-        self.ui.slider_video_duration.setValue(self.id_image)
-        self.ui.slider_video_duration.blockSignals(False)
-        self.set_image_equirectangular_view(self.id_image)
+            if self.id_image == 0:
+                self.ui.button_previous.setEnabled(False)
+            self.ui.slider_video_duration.blockSignals(True)
+            self.ui.slider_video_duration.setValue(self.id_image)
+            self.ui.slider_video_duration.blockSignals(False)
+            self.set_image_equirectangular_view(self.id_image)
+
+        except Exception as e:
+            print(e)
+            print(self.id_image)
 
     def next_image(self):
-        self.id_image += 1
-        self.ui.button_previous.setEnabled(True)
+        try: 
+            self.id_image += 1
+            self.ui.button_previous.setEnabled(True)
 
-        if (len(self.list_frame) - self.id_image) == 1:
-            self.ui.button_next.setEnabled(False)
+            if (len(self.list_frame) - self.id_image) == 1:
+                self.ui.button_next.setEnabled(False)
+                self.finish_video = True
+                self.pause()
+            self.ui.slider_video_duration.blockSignals(True)
+            self.ui.slider_video_duration.setValue(self.id_image)
+            self.ui.slider_video_duration.blockSignals(False)
+            self.set_image_equirectangular_view(self.id_image)
+        except Exception as e:
             self.finish_video = True
             self.pause()
-        self.ui.slider_video_duration.blockSignals(True)
-        self.ui.slider_video_duration.setValue(self.id_image)
-        self.ui.slider_video_duration.blockSignals(False)
-        self.set_image_equirectangular_view(self.id_image)
+            self.ui.button_next.setEnabled(False)
+            self.id_image -= 1
 
     def set_image_equirectangular_view(self, id):
 
@@ -419,11 +431,15 @@ class AnottationWindow(QtWidgets.QMainWindow):
             self.window_upload_result.show()
 
     def pause(self):
-        self.timer.stop()
-        if self.finish_video == False :
-            self.ui.button_play_video.setEnabled(True)
-        self.ui.button_pause_video.setEnabled(False)
-        self.flag_pause=True
+        try:
+            self.timer.stop()
+            if self.finish_video == False :
+                self.ui.button_play_video.setEnabled(True)
+            self.ui.button_pause_video.setEnabled(False)
+            self.flag_pause=True
+        except Exception as e:
+            self.ui.button_previous.setEnabled(True)
+            print(e)
 
     def change_frame_video(self):
         self.id_image = self.ui.slider_video_duration.value()
@@ -809,6 +825,14 @@ class AnottationWindow(QtWidgets.QMainWindow):
         file_path = fname[0]
 
         if file_path != '':
+            upload_csv = Upload_CSV(file_path)
+
+            #check if annotation 
+            if not upload_csv.csv_compatible_video(self.list_frame):
+                self.ui_upload.text_result.setText("Incompatible CSV!")
+                self.window_upload_result.show()
+                return
+
             self.Scroll_area.clear_scroll_area_compose_ROI()
             self.controllerComposeROI.clear_list_compose_ROI()
             size = (self.ui.equi_image.width(),self.ui.equi_image.height())
@@ -823,7 +847,6 @@ class AnottationWindow(QtWidgets.QMainWindow):
                 frame.set_image(frame_original)
                 id+=1
 
-            upload_csv = Upload_CSV(file_path)
             upload_csv.read_csv(self.list_frame, self.dictionary_label_color, self.controllerComposeROI)
             for roi in self.controllerComposeROI.get_list_compose_ROI():
                 self.add_compose_ROI_in_scroll_area(roi)

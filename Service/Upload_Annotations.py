@@ -11,6 +11,23 @@ class Upload_CSV:
     def __init__(self, path):
         self.path = path
 
+    def csv_compatible_video(self, list_imagens):
+        with open(self.path, newline='') as f:
+            reader = csv.reader(f, delimiter=';')
+            header = next(reader)
+            self.data = list(reader)
+            end_frame =0
+            for row in self.data:
+                type_roi = int(row[0])
+                if type_roi == 1 :
+                    end_frame = id_frame = int(row[1])
+                if type_roi == 2 :
+                    if(end_frame > len(list_imagens)):
+                        return False
+                    else:
+                        return True
+        return True
+
     def read_csv(self, list_imagens, dictionary_label_color, control_compose_ROI):
 
         with open(self.path, newline='') as f:

@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Anottation(object):
     def setupUi(self, Anottation):
         Anottation.setObjectName("Anottation")
-        Anottation.resize(1135, 859)
+        Anottation.resize(1189, 837)
         Anottation.setLayoutDirection(QtCore.Qt.LeftToRight)
         Anottation.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(42, 44, 111, 255), stop:0.315789 rgba(28, 29, 73, 255));\n"
 "color:rgb(255,255,255);\n"
@@ -130,7 +130,7 @@ class Ui_Anottation(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.text_time.sizePolicy().hasHeightForWidth())
         self.text_time.setSizePolicy(sizePolicy)
-        self.text_time.setMinimumSize(QtCore.QSize(25, 25))
+        self.text_time.setMinimumSize(QtCore.QSize(70, 25))
         self.text_time.setMaximumSize(QtCore.QSize(20, 25))
         self.text_time.setSizeIncrement(QtCore.QSize(30, 0))
         font = QtGui.QFont()
@@ -183,7 +183,7 @@ class Ui_Anottation(object):
         self.button_next.setObjectName("button_next")
         self.horizontalLayout_3.addWidget(self.button_next)
         self.text_frame_number = QtWidgets.QLabel(self.window)
-        self.text_frame_number.setMinimumSize(QtCore.QSize(25, 0))
+        self.text_frame_number.setMinimumSize(QtCore.QSize(100, 0))
         self.text_frame_number.setMaximumSize(QtCore.QSize(40, 30))
         self.text_frame_number.setSizeIncrement(QtCore.QSize(30, 0))
         font = QtGui.QFont()
@@ -281,7 +281,7 @@ class Ui_Anottation(object):
         self.scroll_area_ROI.setWidgetResizable(True)
         self.scroll_area_ROI.setObjectName("scroll_area_ROI")
         self.scroll_area_ROI_contents = QtWidgets.QWidget()
-        self.scroll_area_ROI_contents.setGeometry(QtCore.QRect(0, 0, 220, 198))
+        self.scroll_area_ROI_contents.setGeometry(QtCore.QRect(0, 0, 247, 198))
         self.scroll_area_ROI_contents.setObjectName("scroll_area_ROI_contents")
         self.scroll_area_ROI.setWidget(self.scroll_area_ROI_contents)
         self.horizontalLayout_6.addWidget(self.scroll_area_ROI)
@@ -294,7 +294,7 @@ class Ui_Anottation(object):
         self.scroll_area_compose_ROI.setWidgetResizable(True)
         self.scroll_area_compose_ROI.setObjectName("scroll_area_compose_ROI")
         self.scroll_area_ROI_contents_2 = QtWidgets.QWidget()
-        self.scroll_area_ROI_contents_2.setGeometry(QtCore.QRect(0, 0, 219, 198))
+        self.scroll_area_ROI_contents_2.setGeometry(QtCore.QRect(0, 0, 246, 198))
         self.scroll_area_ROI_contents_2.setObjectName("scroll_area_ROI_contents_2")
         self.scroll_area_compose_ROI.setWidget(self.scroll_area_ROI_contents_2)
         self.horizontalLayout_6.addWidget(self.scroll_area_compose_ROI)
@@ -653,7 +653,7 @@ class Ui_Anottation(object):
         self.verticalLayout_5.addLayout(self.horizontalLayout_8)
         Anottation.setCentralWidget(self.window)
         self.menubar = QtWidgets.QMenuBar(Anottation)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1135, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1189, 26))
         self.menubar.setObjectName("menubar")
         self.menuUpload = QtWidgets.QMenu(self.menubar)
         self.menuUpload.setObjectName("menuUpload")

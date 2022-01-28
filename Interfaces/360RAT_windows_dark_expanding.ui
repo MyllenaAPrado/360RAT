@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1135</width>
-    <height>859</height>
+    <width>1189</width>
+    <height>837</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -247,7 +247,7 @@ border-color: rgb(44, 0, 66);</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>25</width>
+                <width>70</width>
                 <height>25</height>
                </size>
               </property>
@@ -360,7 +360,7 @@ border-color: rgb(44, 0, 66);</string>
                <widget class="QLabel" name="text_frame_number">
                 <property name="minimumSize">
                  <size>
-                  <width>25</width>
+                  <width>100</width>
                   <height>0</height>
                  </size>
                 </property>
@@ -560,7 +560,7 @@ border-color: rgb(44, 0, 66);</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>220</width>
+                 <width>247</width>
                  <height>198</height>
                 </rect>
                </property>
@@ -591,7 +591,7 @@ border-color: rgb(44, 0, 66);</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>219</width>
+                 <width>246</width>
                  <height>198</height>
                 </rect>
                </property>
@@ -1437,7 +1437,7 @@ border-color: rgb(44, 0, 66);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1135</width>
+     <width>1189</width>
      <height>26</height>
     </rect>
    </property>

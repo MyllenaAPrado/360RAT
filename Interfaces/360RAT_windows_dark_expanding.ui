@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1189</width>
-    <height>837</height>
+    <width>1319</width>
+    <height>920</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -560,7 +560,7 @@ border-color: rgb(44, 0, 66);</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>247</width>
+                 <width>262</width>
                  <height>198</height>
                 </rect>
                </property>
@@ -591,7 +591,7 @@ border-color: rgb(44, 0, 66);</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>246</width>
+                 <width>261</width>
                  <height>198</height>
                 </rect>
                </property>
@@ -663,15 +663,15 @@ border-color: rgb(44, 0, 66);</string>
            <bool>true</bool>
           </property>
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
           <property name="minimumSize">
            <size>
-            <width>200</width>
-            <height>200</height>
+            <width>400</width>
+            <height>400</height>
            </size>
           </property>
           <property name="maximumSize">
@@ -1437,7 +1437,7 @@ border-color: rgb(44, 0, 66);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1189</width>
+     <width>1319</width>
      <height>26</height>
     </rect>
    </property>

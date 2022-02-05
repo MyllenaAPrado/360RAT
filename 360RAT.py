@@ -581,6 +581,10 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.setEnabled(True)
 
     def open_save_roi_window(self):
+        if self.flag_click == False:
+            self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI \nin equirectangular view!")
+            self.window_upload_result.show()
+            return
         window_label_ROI = self.Save_proprieties.get_roi_window()
         window_label_ROI.show()
         window_label_ROI.closeEvent = self.CloseEvent
@@ -753,8 +757,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
             for compose_ROI in self.controllerComposeROI.get_list_compose_ROI():
                 self.add_compose_ROI_in_scroll_area(compose_ROI)
         else:
-            #self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI in a frame after \nthe frame of init ROI!")
-            self.ui_upload.text_result.setText("Frame ID Wrong!")
+            self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI in a frame after the frame of init ROI!\n")
             self.window_upload_result.show()
 
     def add_new_compose_ROI(self):

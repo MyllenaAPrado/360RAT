@@ -1,19 +1,12 @@
 #!/bin/python3
 from Interfaces.Anottation_window import Ui_Anottation
-from Interfaces.ROI_save__window import Ui_SaveROI
-from Interfaces.compose_ROI_save_window import Ui_SaveComposeROI
-from Interfaces.save_ok__window import Ui_save
 from Interfaces.add_label_window import Ui_AddLabel
-from Interfaces.input_window import Ui_Form
 from PyQt5 import QtWidgets, QtGui
 from PyQt5 import QtCore
-from PyQt5.QtCore import QThread
 from PyQt5 import QtGui
 import numpy as np
 from Entities.ImageAnotation import Image_Anotation
 from Entities.ROI import ROI
-from Entities.ComposeROI import Compose_ROI
-from Entities.SimplifiedComposeROI import Simple_compose_ROI
 from Service.SphereFov import NFOV
 from Service.Rendering import Rendering
 from Service.Rendering_video import Rendering_Video
@@ -27,11 +20,8 @@ from Service.GetInputUser import GetInput as GetInputFPS
 from functools import partial
 from sys import platform
 import os
-import csv
-import sys
 import cv2
 import os.path as osp
-import argparse
 
 class AnottationWindow(QtWidgets.QMainWindow):
 
@@ -68,6 +58,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.flag_pause=True
         self.flag_Upload_video_init = False
         self.fps = 60
+        self.flag_click = False
 
         self.nfov = NFOV(400,400)
         self.controllerComposeROI = ComposeROIController(self.ui)
@@ -203,7 +194,6 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.ui.input_ROI_W.setEnabled(False)
         self.ui.input_ROI_H.setEnabled(False)
 
-        
 
     #Upload Image
     def close_upload_window(self):
@@ -342,6 +332,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
 
         self.Scroll_area.clear_scroll_area_single_ROI()
         self.nfov.nfov_id = 1
+        self.flag_click = False
         
         #add in scroll area roi saved previous
         for roi in self.list_frame[id].get_list_roi():
@@ -369,7 +360,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
         video_path = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', 'c\\', 'Image files ( *.mp4)')
 
         if video_path[0] !='':
-            self.window_input_FPS.set_text_window("FPS")
+            self.window_input_FPS.set_text_window("Enter FPS of video:")
             window = self.window_input_FPS.get_window()
             ui_input = self.window_input_FPS.get_ui()
             ui_input.button_OK.clicked.connect(partial(self.rendering_video, video_path))
@@ -470,6 +461,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
 
         self.center_point = np.array([x/self.ui.equi_image.width(), y/self.ui.equi_image.height()])
         self.update_view()
+        self.flag_click = True
         
         #enable button associated with ROI
         if self.controllerSingleROI.get_flag_edit_roi() == False :
@@ -595,6 +587,10 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.setEnabled(False)
 
     def open_save_compose_roi_window(self):
+        if self.flag_click == False:
+            self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI \nin equirectangular view!")
+            self.window_upload_result.show()
+            return
         window_save_compose_ROI = self.Save_proprieties.get_compose_roi_window()
         window_save_compose_ROI.show()
         window_save_compose_ROI.closeEvent = self.CloseEvent
@@ -743,7 +739,10 @@ class AnottationWindow(QtWidgets.QMainWindow):
             self.add_disable_compose_ROI_in_scroll_area(compose_ROI)
 
     def save_finish_compose_ROI(self):
-
+        if self.flag_click == False:
+            self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI \nin equirectangular view!")
+            self.window_upload_result.show()
+            return            
         flag,roi_compose = self.controllerComposeROI.save_finish_compose_ROI(self.ui, self.center_point, self.nfov.FOV, self.id_image)
         if flag == True:
             self.controllerComposeROI.set_compose_ROI(self.ui, self.list_frame, self.dictionary_label_color)
@@ -754,7 +753,8 @@ class AnottationWindow(QtWidgets.QMainWindow):
             for compose_ROI in self.controllerComposeROI.get_list_compose_ROI():
                 self.add_compose_ROI_in_scroll_area(compose_ROI)
         else:
-            self.ui_upload.text_result.setText("ID Frame wrong!")
+            #self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI in a frame after \nthe frame of init ROI!")
+            self.ui_upload.text_result.setText("Frame ID Wrong!")
             self.window_upload_result.show()
 
     def add_new_compose_ROI(self):
@@ -800,7 +800,6 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.ui.button_init_ROI.setEnabled(False)
         self.ui.button_set_init_CROI.setEnabled(True)
         self.ui.button_cancel_edit_compose_ROI.setEnabled(True)
-
 
     def set_init_edit_group(self):
         self.controllerComposeROI.edit_group_compose_ROI(self.ui, self.center_point,self.nfov.FOV, self.id_image)

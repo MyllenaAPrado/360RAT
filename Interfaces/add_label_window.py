@@ -14,11 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AddLabel(object):
     def setupUi(self, AddLabel):
         AddLabel.setObjectName("AddLabel")
-        AddLabel.resize(257, 151)
+        AddLabel.resize(296, 160)
         AddLabel.setStyleSheet("background-color: rgb(28, 29, 73);\n"
 "color: rgb(255, 255, 255);")
+        self.verticalLayout = QtWidgets.QVBoxLayout(AddLabel)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.text_result = QtWidgets.QLabel(AddLabel)
-        self.text_result.setGeometry(QtCore.QRect(40, 30, 181, 31))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(14)
@@ -26,14 +27,15 @@ class Ui_AddLabel(object):
         self.text_result.setText("")
         self.text_result.setAlignment(QtCore.Qt.AlignCenter)
         self.text_result.setObjectName("text_result")
+        self.verticalLayout.addWidget(self.text_result)
         self.pushButton_OK = QtWidgets.QPushButton(AddLabel)
-        self.pushButton_OK.setGeometry(QtCore.QRect(80, 90, 93, 28))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(10)
         self.pushButton_OK.setFont(font)
         self.pushButton_OK.setStyleSheet("background-color: rgb(0, 0, 100);")
         self.pushButton_OK.setObjectName("pushButton_OK")
+        self.verticalLayout.addWidget(self.pushButton_OK)
 
         self.retranslateUi(AddLabel)
         QtCore.QMetaObject.connectSlotsByName(AddLabel)

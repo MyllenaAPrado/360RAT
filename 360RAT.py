@@ -1,4 +1,5 @@
 #!/bin/python3
+from pickle import NONE
 from Interfaces.Anottation_window import Ui_Anottation
 from Interfaces.add_label_window import Ui_AddLabel
 from PyQt5 import QtWidgets, QtGui
@@ -78,7 +79,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
         #change the maxinum of fov oppening
         self.ui.slider_fov_h.setMaximum(22)
         self.ui.slider_fov_w.setMaximum(11)
-
+        
         #push bottun conect
         self.ui.button_upload_image.triggered.connect(self.upload_image)
         self.ui.button_upload_folder.triggered.connect(self.upload_folder)
@@ -92,17 +93,19 @@ class AnottationWindow(QtWidgets.QMainWindow):
                              + " } :disabled { background-color: rgb(143, 143, 143);}")
         self.ui.button_upload_Annotations.triggered.connect(self.upload_csv)
 
-    
         #buttons single roi
         self.ui.button_save_ROI.clicked.connect(self.open_save_roi_window)
         self.ui.button_save_ROI.setStyleSheet(":enabled { background-color: rgb(0, 0, 100);"
                              + " } :disabled { background-color: rgb(143, 143, 143);}")
+
         self.ui.button_delete_ROI.clicked.connect(self.delete_ROI)
         self.ui.button_delete_ROI.setStyleSheet(":enabled { background-color: rgb(0, 0, 100);"
                              + " } :disabled { background-color: rgb(143, 143, 143);}")
+
         self.ui.button_save_edit.clicked.connect(self.open_save_roi_window)
         self.ui.button_save_edit.setStyleSheet(":enabled { background-color: rgb(0, 0, 100);"
                              + " } :disabled { background-color: rgb(143, 143, 143);}")
+
         self.ui.button_cancel_edit.clicked.connect(partial(self.controllerSingleROI.finish_edit_ROI, self.ui))
         self.ui.button_cancel_edit.setStyleSheet(":enabled { background-color: rgb(0, 0, 100);"
                              + " } :disabled { background-color: rgb(143, 143, 143);}")
@@ -235,9 +238,9 @@ class AnottationWindow(QtWidgets.QMainWindow):
             self.ui.button_next.setEnabled(False)
             self.ui.button_previous.setEnabled(False)
             
-        else:
+        '''else:
             self.ui_upload.text_result.setText("Upload Canceled!")
-            self.window_upload_result.show()
+            self.window_upload_result.show()'''
 
     def upload_folder(self):
         folder_name = str(QtWidgets.QFileDialog.getExistingDirectory(self, "Select Directory"))
@@ -267,9 +270,9 @@ class AnottationWindow(QtWidgets.QMainWindow):
                 self.ui.button_next.setEnabled(True)
             
             
-        else:
+        '''else:
             self.ui_upload.text_result.setText("Upload Canceled!")
-            self.window_upload_result.show()
+            self.window_upload_result.show()'''
 
     def previous_image(self):
         try: 
@@ -368,9 +371,9 @@ class AnottationWindow(QtWidgets.QMainWindow):
             window.closeEvent = self.CloseEvent
             self.setEnabled(False)   
 
-        else:
+        '''else:
             self.ui_upload.text_result.setText("Upload Canceled!")
-            self.window_upload_result.show()
+            self.window_upload_result.show()'''
 
     def rendering_video(self, video_path):
 
@@ -710,13 +713,23 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.controllerComposeROI.cancel_edit_one_compose_ROI(self.ui)
 
     def save_edit_one_compose_ROI(self):
-        self.controllerComposeROI.save_edit_one_compose_ROI(self.ui, self.center_point, self.nfov.FOV, self.list_frame, self.id_image, self.dictionary_label_color, self.path_frames_original)
-        self.set_image_equirectangular_view(self.id_image)
+        if self.flag_click == False:
+            self.ui_upload.text_result.setText("ERROR! \n\nSelect a new ROI \nin equirectangular view!")
+            self.window_upload_result.show()
+            return 
 
-        #enable buttons in scroll area
-        self.Scroll_area.clear_scroll_area_compose_ROI()
-        for compose_ROI in self.controllerComposeROI.get_list_compose_ROI():
-            self.add_compose_ROI_in_scroll_area(compose_ROI)
+        try:
+            self.controllerComposeROI.save_edit_one_compose_ROI(self.ui, self.center_point, self.nfov.FOV, self.list_frame, self.id_image, self.dictionary_label_color, self.path_frames_original)
+            self.set_image_equirectangular_view(self.id_image)
+
+            #enable buttons in scroll area
+            self.Scroll_area.clear_scroll_area_compose_ROI()
+            for compose_ROI in self.controllerComposeROI.get_list_compose_ROI():
+                self.add_compose_ROI_in_scroll_area(compose_ROI)
+                
+        except Exception as e:
+            self.ui_upload.text_result.setText("ERROR! \n\nFrame out of interval of compose ROI!")
+            self.window_upload_result.show()
 
     def delete_compose_ROI(self):
 
@@ -777,6 +790,10 @@ class AnottationWindow(QtWidgets.QMainWindow):
             self.add_disable_compose_ROI_in_scroll_area(compose_ROI)
 
     def add_compose_ROI(self):
+        if self.flag_click == False:
+            self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI \nin equirectangular view!")
+            self.window_upload_result.show()
+            return 
         self.controllerComposeROI.add_compose_ROI(self.ui)
         self.go_to_end_frame()
         
@@ -786,6 +803,10 @@ class AnottationWindow(QtWidgets.QMainWindow):
             self.add_disable_compose_ROI_in_scroll_area(compose_ROI)
             
     def save_add_compose_ROI(self):
+        if self.flag_click == False:
+            self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI \nin equirectangular view!")
+            self.window_upload_result.show()
+            return 
         self.controllerComposeROI.save_add_compose_ROI(self.center_point, self.nfov.FOV, self.id_image)
         self.controllerComposeROI.set_add_compose_ROI(self.ui, self.list_frame, self.dictionary_label_color)
         self.ui.button_save_add_ROI.setEnabled(False)
@@ -831,7 +852,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
 
             #check if annotation 
             if not upload_csv.csv_compatible_video(self.list_frame):
-                self.ui_upload.text_result.setText("Incompatible CSV!")
+                self.ui_upload.text_result.setText("CSV file incompatible with the current video!")
                 self.window_upload_result.show()
                 return
 
@@ -857,11 +878,12 @@ class AnottationWindow(QtWidgets.QMainWindow):
             self.ui.button_save.setEnabled(True)
 
             self.ui_upload.text_result.setText("Upload Sucesfull!")
+            self.window_upload_result.show()
             
-        else:
-            self.ui_upload.text_result.setText("Upload Fail!")
+        '''else:
+            self.ui_upload.text_result.setText("Upload Fail!")'''
 
-        self.window_upload_result.show()
+        
 
 
 def main():

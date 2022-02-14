@@ -95,8 +95,9 @@ class CSV:
                 shutil.rmtree(path)
             except OSError as e:
                 print("Error: %s - %s." % (e.filename, e.strerror))
-            
-        os.makedirs(path)
+                
+        if not os.path.exists(path):
+            os.makedirs(path)
 
         #create folder annotation inside folder user
         if platform == "linux" or platform == "linux2":

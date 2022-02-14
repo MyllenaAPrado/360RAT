@@ -104,7 +104,7 @@ class ComposeROIController():
             self.nfov.set_fov(fov_w, fov_h)
             self.nfov.updateNFOV(np.array([pos_x, pos_y]))
             self.nfov.draw_NFOV_edges(list_frame[self.roi_compose.get_frame_init()+ i].get_image(), label_color= dictionary_label_color[self.roi_compose.get_label()])
-        
+
         #back to init frame of compose roi
         #ui.slider_video_duration.setValue(self.roi_compose.get_frame_init())
 
@@ -126,14 +126,15 @@ class ComposeROIController():
         self.disable_button(ui)
 
     def save_edit_one_compose_ROI(self, ui, center_point, FOV, list_frame, id_image, dictionary_label_color, path_frame):
-        ui.button_cancel_edit_compose_ROI.setEnabled(False)
-        ui.button_save_edit_compose_ROI.setEnabled(False)
-        ui.button_init_ROI.setEnabled(True)
-
+        #print(self.id_select_compose_ROI)
         #set new parametes for roi
         roi = list_frame[id_image].get_list_compose_ROI()[self.id_select_compose_ROI - 1]
         roi.set_center_point(center_point)
         roi.set_fov(FOV)
+
+        ui.button_cancel_edit_compose_ROI.setEnabled(False)
+        ui.button_save_edit_compose_ROI.setEnabled(False)
+        ui.button_init_ROI.setEnabled(True)
 
         #set new image for anotation object
         size = (ui.equi_image.width(),ui.equi_image.height())
@@ -215,6 +216,7 @@ class ComposeROIController():
         return self.id_select_compose_ROI
 
     def add_new_composer_ROI(self, ui, center_point, FOV, id_image):
+        
         aux_compose_ROI = self.list_compose_ROI[self.id_select_compose_ROI-1]
         self.roi_add= Compose_ROI(self.id_compose_ROI, center_point, FOV, id_image, aux_compose_ROI.get_label(), aux_compose_ROI.get_movement())
 
@@ -227,7 +229,9 @@ class ComposeROIController():
         ui.button_cancel_edit_compose_ROI.setEnabled(True)
 
     def add_compose_ROI(self, ui):
+
         aux_compose_ROI = self.list_compose_ROI[self.id_select_compose_ROI-1]
+
         self.roi_add = Compose_ROI(0,aux_compose_ROI.get_center_point_end(), aux_compose_ROI.get_fov_end(), (aux_compose_ROI.get_frame_end()+1), aux_compose_ROI.get_label(), aux_compose_ROI.get_movement())
         #print("Mov", aux_compose_ROI.get_movement())
        

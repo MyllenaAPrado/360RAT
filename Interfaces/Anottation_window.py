@@ -668,11 +668,14 @@ class Ui_Anottation(object):
         self.button_save.setObjectName("button_save")
         self.button_upload_Annotations = QtWidgets.QAction(Anottation)
         self.button_upload_Annotations.setObjectName("button_upload_Annotations")
+        self.button_save_as = QtWidgets.QAction(Anottation)
+        self.button_save_as.setObjectName("button_save_as")
         self.menuUpload.addAction(self.button_upload_image)
         self.menuUpload.addAction(self.button_upload_folder)
         self.menuUpload.addAction(self.button_upload_video)
         self.menuUpload.addAction(self.button_upload_Annotations)
         self.menuUpload.addAction(self.button_save)
+        self.menuUpload.addAction(self.button_save_as)
         self.menubar.addAction(self.menuUpload.menuAction())
 
         self.retranslateUi(Anottation)
@@ -736,6 +739,7 @@ class Ui_Anottation(object):
         self.button_upload_video.setText(_translate("Anottation", "Upload Video"))
         self.button_save.setText(_translate("Anottation", "Save"))
         self.button_upload_Annotations.setText(_translate("Anottation", "Upload Annotations"))
+        self.button_save_as.setText(_translate("Anottation", "Save as"))
 
 
 if __name__ == "__main__":

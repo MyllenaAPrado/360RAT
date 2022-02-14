@@ -85,6 +85,7 @@ class AnottationWindow(QtWidgets.QMainWindow):
         self.ui.button_upload_folder.triggered.connect(self.upload_folder)
         self.ui.button_upload_video.triggered.connect(self.upload_video)        
         self.ui.button_save.triggered.connect(self.save_csv)
+        self.ui.button_save_as.triggered.connect(self.save_as_csv)
         
         self.ui.button_play_video.setStyleSheet(":enabled { background-color: rgb(0, 0, 100);"
                              + " } :disabled { background-color: rgb(143, 143, 143);}")
@@ -841,7 +842,10 @@ class AnottationWindow(QtWidgets.QMainWindow):
 
     #CSV
     def save_csv(self):
-        self.csv.save_file(self.list_frame, self.controllerComposeROI.get_list_compose_ROI(), self.fps, self.nfov, self.dictionary_label_color)
+        self.csv.save_file(self.list_frame, self.controllerComposeROI.get_list_compose_ROI(), self.fps, self.nfov, self.dictionary_label_color, False)
+    
+    def save_as_csv(self):
+        self.csv.save_file(self.list_frame, self.controllerComposeROI.get_list_compose_ROI(), self.fps, self.nfov, self.dictionary_label_color, True)
 
     def upload_csv(self):
         fname = QtWidgets.QFileDialog.getOpenFileName(self, 'Open File', 'c\\', 'files ( *.csv)')

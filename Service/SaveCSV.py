@@ -36,10 +36,12 @@ class CSV:
         ui_input.input.editingFinished.connect(self.save)
         self.fps = 60
 
+        self.flag_path = False
+
     def close_save_csv_window(self):
         self.window_save_csv.hide()
 
-    def save_file(self, list_imagens, list_ROI, fps, FOV, dictionary):
+    def save_file(self, list_imagens, list_ROI, fps, FOV, dictionary, flag):
         self.list_image_anotation = list_imagens
         self.list_compose_ROI = list_ROI
         self.fps = fps
@@ -48,6 +50,7 @@ class CSV:
 
         self.window_input.set_text_window("Enter your name:")
         window = self.window_input.get_window()
+        self.flag_path = flag
         
         
         window.show()
@@ -58,80 +61,48 @@ class CSV:
         self.user = self.window_input.get_input_text()
         #self.window_input.clear_input_field()
         self.list_dictionary.clear()
-        self.save_imagens_files()
+        if self.flag_path == False:
+            path = os.getcwd()
+            cwd = osp.join(path, "videosAnotated")
+        else:
+            fname = QtWidgets.QFileDialog.getExistingDirectory()
+            cwd = fname
+
+        self.save_imagens_files(cwd)
         self.create_dictionary()
-        self.save_dictionary()       
+        self.save_dictionary(cwd)       
 
         self.window_save_csv.show()
 
-    def save_imagens_files(self):
-        cwd = os.getcwd()
+    def save_imagens_files(self, cwd):        
         
         head, tail = os.path.split(self.list_image_anotation[0].get_path())
-
-        #create folder user 
-        if platform == "linux" or platform == "linux2":
-            # linux
-            path = osp.join(cwd, "videosAnotated/{}".format(self.user))
-
-        elif platform == "win32":
-            # Windows...
-            path = osp.join(cwd, "videosAnotated\{}".format(self.user))
         
+        path = osp.join(cwd, self.user)
         if not os.path.exists(path):
             os.makedirs(path)
 
-        #create folder of video inside user folder
-        if platform == "linux" or platform == "linux2":
-            # linux
-            path = osp.join(cwd, "videosAnotated/{}/{}".format(self.user, tail))
-
-        elif platform == "win32":
-            # Windows...
-            path = osp.join(cwd, "videosAnotated\{}\{}".format(self.user, tail))
-        
+        path = os.path.join(*[cwd, self.user, tail])
         if os.path.exists(path):
             try:
                 shutil.rmtree(path)
             except OSError as e:
                 print("Error: %s - %s." % (e.filename, e.strerror))
-                
+
         if not os.path.exists(path):
             os.makedirs(path)
 
-        #create folder annotation inside folder user
-        if platform == "linux" or platform == "linux2":
-            # linux
-            path = osp.join(cwd, "videosAnotated/{}/{}/{}".format(self.user, tail, "annotation"))
 
-        elif platform == "win32":
-            # Windows...
-            path = osp.join(cwd, "videosAnotated\{}\{}\{}".format(self.user, tail, "annotation"))
-        
+        path = os.path.join(*[cwd, self.user, tail, "annotation"])        
         if not os.path.exists(path):
             os.makedirs(path)
         
-        #create folder blackMask inside folder user
-        if platform == "linux" or platform == "linux2":
-            # linux
-            mask_path = osp.join(cwd, "videosAnotated/{}/{}/{}".format(self.user, tail, "blackMask"))
 
-        elif platform == "win32":
-            # Windows...
-            mask_path = osp.join(cwd, "videosAnotated\{}\{}\{}".format(self.user, tail, "blackMask"))
-        
+        mask_path = os.path.join(*[cwd, self.user, tail, "blackMask"])
         if not os.path.exists(mask_path):
             os.makedirs(mask_path)      
 
-        if platform == "linux" or platform == "linux2":
-            # linux
-            path_video = osp.join(cwd, "videosAnotated/{}/{}/{}".format(self.user, tail, "video.mp4"))
-
-        elif platform == "win32":
-            # Windows...
-            path_video = osp.join(cwd, "videosAnotated\{}\{}\{}".format(self.user, tail, "video.mp4"))
-
-        
+        path_video = os.path.join(*[cwd, self.user, tail, "video.mp4"])
         shape = self.list_image_anotation[0].get_image().shape
         width = shape[1] 
         height = shape[0] 
@@ -224,18 +195,10 @@ class CSV:
                         }
             self.list_dictionary.append(roi_dict)
 
-    def save_dictionary(self):
-        cwd = os.getcwd()
+    def save_dictionary(self, cwd):
         head, tail = os.path.split(self.list_image_anotation[0].get_path())
-
-        if platform == "linux" or platform == "linux2":
-            # linux
-            path = osp.join(cwd, "videosAnotated/{}/{}/{}".format(self.user, tail, f'list_of_Roi_{self.user}_{tail}.csv'))
-
-        elif platform == "win32":
-            # Windows...
-            path = osp.join(cwd, "videosAnotated\{}\{}\{}".format(self.user, tail, f'list_of_Roi_{self.user}_{tail}.csv'))
         
+        path = os.path.join(*[cwd,self.user, tail, f'list_of_Roi_{self.user}_{tail}.csv'])
         if os.path.exists(path):
             os.remove(path)
 

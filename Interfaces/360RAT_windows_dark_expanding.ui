@@ -1501,6 +1501,7 @@ border-color: rgb(44, 0, 66);</string>
     <addaction name="button_upload_video"/>
     <addaction name="button_upload_Annotations"/>
     <addaction name="button_save"/>
+    <addaction name="button_save_as"/>
    </widget>
    <addaction name="menuUpload"/>
   </widget>
@@ -1527,6 +1528,11 @@ border-color: rgb(44, 0, 66);</string>
   <action name="button_upload_Annotations">
    <property name="text">
     <string>Upload Annotations</string>
+   </property>
+  </action>
+  <action name="button_save_as">
+   <property name="text">
+    <string>Save as</string>
    </property>
   </action>
  </widget>

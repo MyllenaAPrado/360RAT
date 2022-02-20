@@ -791,10 +791,6 @@ class AnottationWindow(QtWidgets.QMainWindow):
             self.add_disable_compose_ROI_in_scroll_area(compose_ROI)
 
     def add_compose_ROI(self):
-        if self.flag_click == False:
-            self.ui_upload.text_result.setText("ERROR! \n\nSelect a ROI \nin equirectangular view!")
-            self.window_upload_result.show()
-            return 
         self.controllerComposeROI.add_compose_ROI(self.ui)
         self.go_to_end_frame()
         

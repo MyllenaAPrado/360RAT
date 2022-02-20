@@ -685,8 +685,8 @@ border-color: rgb(44, 0, 66);</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>200</width>
-            <height>200</height>
+            <width>300</width>
+            <height>300</height>
            </size>
           </property>
           <property name="maximumSize">

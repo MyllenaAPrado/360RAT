@@ -326,7 +326,7 @@ class Ui_Anottation(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.perspective_image.sizePolicy().hasHeightForWidth())
         self.perspective_image.setSizePolicy(sizePolicy)
-        self.perspective_image.setMinimumSize(QtCore.QSize(200, 200))
+        self.perspective_image.setMinimumSize(QtCore.QSize(300, 300))
         self.perspective_image.setMaximumSize(QtCore.QSize(400, 400))
         self.perspective_image.setStyleSheet("background-color: rgb(28, 29, 73);")
         self.perspective_image.setText("")

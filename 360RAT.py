@@ -77,8 +77,8 @@ class AnottationWindow(QtWidgets.QMainWindow):
         #self.ui.button_upload_labels.clicked.connect(self.open_label_csv)
 
         #change the maxinum of fov oppening
-        self.ui.slider_fov_h.setMaximum(22)
-        self.ui.slider_fov_w.setMaximum(11)
+        #self.ui.slider_fov_h.setMaximum(22)
+        #self.ui.slider_fov_w.setMaximum(11)
         
         #push bottun conect
         self.ui.button_upload_image.triggered.connect(self.upload_image)

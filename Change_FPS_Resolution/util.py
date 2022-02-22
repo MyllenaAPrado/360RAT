@@ -19,31 +19,32 @@ class main():
         
         #Change the follow variables
         #intit frame to draw
-        self.id_init = 2 #0
+        self.id_init = 0
         #final frame to draw
-        self.id_final = 301 #302
+        self.id_final = 151
         #intit frame to draw
         self.id_cube = '000200'
 
 
-        self.nome_video = "wingsuit_dubai_nas_1080x540_5.mp4"
-        self.nome_folder_cube= "wingsuit_dubai_nas_1080x540_5"
+        self.nome_video = "Amizade_1080x540_5.mp4"
+        self.nome_folder_cube= "Amizade_1080x540_5"
         
         #place where the csv are. The image output will be in this folder too
-        data_folder = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\360RAT\\files CSV\\{self.nome_video}"
+        
+        data_folder = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\360RAT\\files CSV\\second part\\{self.nome_video}"
         
         for id_frame in range (self.id_init, self.id_final, 1):
 
             #Path of original frame
-            self.image_path = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\CP-360-Weakly-Supervised-Saliency\\output\\static_resnet50\\{self.nome_folder_cube}\\" + '{0:06}.jpg'.format(id_frame+2)
-            #self.image_path = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\360RAT\\videosAnotated\\videos\\{self.nome_video}\\{id_frame}.jpg"
+            #self.image_path = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\CP-360-Weakly-Supervised-Saliency\\output\\static_resnet50\\{self.nome_folder_cube}\\" + '{0:06}.jpg'.format(id_frame+2)
+            self.image_path = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\360RAT\\videosAnotated\\videos\\{self.nome_video}\\{id_frame}.jpg"
             print("PATH:",self.image_path)
             self.img = cv2.imread(self.image_path)
             self.img = cv2.resize(self.img, (1080, 540), interpolation = cv2.INTER_AREA)
             
             # To draw in a black mask change the self.img to the follow line:
             #self.img = np.zeros((self.img .shape[0]+2, self.img .shape[1]+2), np.uint8)
-            self.color =[self.RED, self.BLUE, self.GREEN, self.ORANGE, self.PINK, self.BLACK, self.PURPLE, self.YELLOW]
+            self.color =[self.BLACK, self.RED, self.OLIVE, self.ORANGE, self.INDIGO, self.CYAN,  self.MANGETA, self.BLUE, self.GREEN]
 
             files = [f for f in listdir(data_folder) if isfile(join(data_folder, f))]
             for file in files:
@@ -53,7 +54,8 @@ class main():
                     self.color.pop(0)
 
 
-            output_path = data_folder + f"\\img_{id_frame}.jpg"
+            output_path = data_folder + f"\\img_{id_frame}_amizade.jpg"
+            print("Output: ",output_path)
 
             cv2.imwrite(output_path, self.img)
 
@@ -90,6 +92,10 @@ class main():
         self.LIGHTPINK_RGB = (255, 174, 185)
         self.SAPGREEN = (20, 128, 48)
         self.SAPGREEN_RGB = (48, 128, 20) 
+        self.OLIVE = (128, 128, 0)
+        self.CYAN = (0, 255, 255)
+        self.INDIGO = (75, 0, 130)
+
 
     def get_dictionary_color(self):
         dictionary= {'Accessory' : self.GREEN, 'Animal' : self.ORANGE,

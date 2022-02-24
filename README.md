@@ -75,3 +75,20 @@ Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
 
 - Video: https://youtu.be/YWhyuafnATI
 
+# Output Data of Software
+|        Field       |                                     mean                                     | options                                                                                                                                                     |
+|:------------------:|:----------------------------------------------------------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|        Type        |                                       Represent the type os ROI saved in csv | 0 - Representing that row is a "Single ROI". 1- Representing one ROI which is part of "compose ROI" . 2 - Representing that row is a complete "compose ROI" |
+|        Frame       |                                              frame position during the video | Number from 0 to total frame of video                                                                                                                       |
+|       ID ROI       | ID of ROI. The count of ID is independent to "single ROI" and "compose ROI". | Number bagin on 0 and increase 1 with each new ROI annotated.                                                                                               |
+|   Center_point X   |     X coordinate in the picture frame corresponding to the center of the ROI | Ranging from 0 to 1. Representing the center of "single ROI" or the first ROI of "compose ROI"                                                              |
+|   Center_point Y   |     Y coordinate in the picture frame corresponding to the center of the ROI | Ranging from 0 to 1. Representing the center of "single ROI" or the first ROI of "compose ROI"                                                              |
+| ROI H              | Horizontal ROI scale                                                         | Ranging from 0 to 1.                                                                                                                                        |
+| ROI W              | Vertical ROI scale                                                           | Ranging from 0 to 1.                                                                                                                                        |
+| Label              | Semantic classification of the ROI                                           | See file Save_windows.py                                                                                                                                    |
+| Movement           | Movement of ROI along the frame and video.                                   | “True” when the ROI is declared to be moving across the frames, “False” when it is declared as static, “*” for the“single ROI”                              |
+| Frame_end          | Frame position during the video                                              | Id of frame for type=2. ( Only present for type =2, otherwise equal 0)                                                                                      |
+| Center_point_end X |    𝑥 coordinate in the picture frame corresponding to the center of the ROI  | Ranging from 0 to 1.(Only present for type =2 otherwise equal 0.)                                                                                           |
+| Center_point_end Y | 𝑦 coordinate in the picture frame corresponding to the center of the ROI     | Ranging from 0 to 1. (Only present for type =2 otherwise equal 0)                                                                                           |
+| ROI H              | Horizontal ROI scale                                                         | Ranging from 0 to 1. (Only present for type =2 otherwise equal 0)|
+| ROI W              | Vertical ROI scale                                                           | Ranging from 0 to 1.(Only present for type =2 otherwise equal 0) |

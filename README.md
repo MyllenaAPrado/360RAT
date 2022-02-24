@@ -68,28 +68,39 @@ Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
 
 ## Download and install from this repository:
 
-`cd 360RAT`
+- After install go to directory of program:
 
+       `cd 360RAT`
 
-`python .\360RAT.py`
+- Execute the program:
+
+       `python .\360RAT.py`
 
 
 ## Virtual Machine with the software
 
-1. Dowloand the virtual machine from : (LINK)
-2. Install on virtual machine
-3. Turn on Virtual Machine.
-4. User: IEUser
+1. Dowloand the virtual machine from : [Link to dowload](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
+
+2. Upload the file on virtual box ([link to help upload a .ova file on virtual box](https://www.alphr.com/ova-virtualbox/))
+
+3. Start Virtual Machine.
+
+4. Enter:
+   User: IEUser
    password: Passw0rd!
-5. Open Windows PowerShell and enter:
 
-`cd C:\Users\IEUser\Desktop\360rat`
+5. Open powerShell
 
+6. Go to directory of program with the command:
 
-`python .\360RAT.py`
+       `cd C:\Users\IEUser\Desktop\360rat`
+
+7. Execute the program:
+       
+       `python .\360RAT.py`
        
 
-### Tutorial
+### Tutorial to annotate an video
 
 - Video: https://youtu.be/YWhyuafnATI
 

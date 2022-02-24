@@ -66,19 +66,46 @@ Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
 
 # Use operation
 
+## Download and install from this repository:
+
 `cd 360RAT`
 
 
 `python .\360RAT.py`
 
+
+## Virtual Machine with the software
+
+1. Dowloand the virtual machine from : (LINK)
+2. Install on virtual machine
+3. Turn on Virtual Machine.
+4. User: IEUser
+   password: Passw0rd!
+5. Open Windows PowerShell and enter:
+
+`cd C:\Users\IEUser\Desktop\360rat`
+
+
+`python .\360RAT.py`
+       
+
 ### Tutorial
 
 - Video: https://youtu.be/YWhyuafnATI
 
+
+
 # Output Data of Software
+A folder with :
+
+- All frames annotated
+- All frames in black with ROI annottated draw in white.
+- A video with the ROIs annotated draw on frames.
+- CSV with properties of annotations that can be upload in program to edit the annotation done before. This CSV has the follow proprierties:
+
 |        Field       |                                     mean                                     | options                                                                                                                                                     |
 |:------------------:|:----------------------------------------------------------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|        Type        |                                       Represent the type os ROI saved in csv | 0 - Representing that row is a "Single ROI". 1- Representing one ROI which is part of "compose ROI" . 2 - Representing that row is a complete "compose ROI" |
+|        Type        |                                       Represent the type os ROI saved in csv | 0 - Representing that row is a "Single ROI".  1- Representing one ROI which is part of "compose ROI".  2 - Representing that row is a complete "compose ROI" |
 |        Frame       |                                              frame position during the video | Number from 0 to total frame of video                                                                                                                       |
 |       ID ROI       | ID of ROI. The count of ID is independent to "single ROI" and "compose ROI". | Number bagin on 0 and increase 1 with each new ROI annotated.                                                                                               |
 |   Center_point X   |     X coordinate in the picture frame corresponding to the center of the ROI | Ranging from 0 to 1. Representing the center of "single ROI" or the first ROI of "compose ROI"                                                              |

@@ -31,13 +31,13 @@ class main():
         
         #place where the csv are. The image output will be in this folder too
         
-        data_folder = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\360RAT\\files CSV\\second part\\{self.nome_video}"
+        data_folder = f"path\\{self.nome_video}"
         
         for id_frame in range (self.id_init, self.id_final, 1):
 
             #Path of original frame
-            #self.image_path = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\CP-360-Weakly-Supervised-Saliency\\output\\static_resnet50\\{self.nome_folder_cube}\\" + '{0:06}.jpg'.format(id_frame+2)
-            self.image_path = f"C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\360RAT\\videosAnotated\\videos\\{self.nome_video}\\{id_frame}.jpg"
+            #self.image_path = f"path\\{self.nome_folder_cube}\\" + '{0:06}.jpg'.format(id_frame+2)
+            self.image_path = f"path\{self.nome_video}\\{id_frame}.jpg"
             print("PATH:",self.image_path)
             self.img = cv2.imread(self.image_path)
             self.img = cv2.resize(self.img, (1080, 540), interpolation = cv2.INTER_AREA)

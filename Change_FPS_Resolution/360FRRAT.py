@@ -14,12 +14,12 @@ class main():
         self.nfov = NFOV()
         self.set_colors_variables()
         self.dictionary_label_color = self.get_dictionary_color()
-        #self.video_path = "C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\videos\\1000x500\\fps30\\video_22_nas_1000x500_30.mp4"
-        self.video_path = "C:\\Users\\vntmypr\\Documents\\myllena\\TCC2\\Git\\videos\\Afshin videos ERP-CRF23\\video_22_nas_4320x2160_30.mp4"
+        #self.video_path = "path\\video_22_nas_1000x500_30.mp4"
+        self.video_path = "path\\video_22_nas_4320x2160_30.mp4"
         self.cap = cv2.VideoCapture(self.video_path)
         self.fps_input = 5
         self.fps_output = 30
-        data_folder = Path("C:/Users/vntmypr/Documents/myllena/TCC2/Git/360RAT/videosAnotated/TestFRRAT/video_22_nas_1000x500_5.mp4")
+        data_folder = Path("path/video_22_nas_1000x500_5.mp4")
         self.path_csv = data_folder /  "list_of_Roi.csv"
         self.path_output_video = "output_4320x2160.mp4"
         self.width = 4320

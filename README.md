@@ -67,6 +67,7 @@
 4. Enter
 
    User: IEUser
+   
    password: Passw0rd!
 
 5. Open powerShell

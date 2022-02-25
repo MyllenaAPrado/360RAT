@@ -18,8 +18,6 @@
        
 # Instructions
 
-
-
 ## Requirements
 
 * [Python 3.9.5](https://www.python.org/) & [Pip 21.2.4](https://pypi.org/project/pip/)
@@ -48,7 +46,7 @@
 
 1. Download the virtual machine from : [Link to dowload](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
 
-2. Upload the file on virtual box ([link to help upload a .ova file on virtual box](https://www.alphr.com/ova-virtualbox/))
+2. Upload the file to the VirtualBox. ([for help, click here.](https://www.alphr.com/ova-virtualbox/))
 
 3. Start the Virtual Machine.
 

@@ -5,7 +5,7 @@
 
 * 360RAT is a tool to annotate regions of interest (ROIs) in omnidirectional videos.
 * It was developed using [Equirectangular-toolbox](https://github.com/NitishMutha/equirectangular-toolbox), [OpenCV](https://pypi.org/project/opencv-python/), [PyQt5 5.15.4](https://pypi.org/project/PyQt5/), and [python 3.9.5](https://www.python.org/).
-* Video Tutorial on "How to annotate a video": https://youtu.be/YWhyuafnATI
+* Video Tutorial on ["How to annotate a 360-degree video using 360RAT"](https://youtu.be/YWhyuafnATI)
 
 * If you use this software in your project, please cite this repository:
 

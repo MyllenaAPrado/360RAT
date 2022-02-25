@@ -44,6 +44,10 @@
 
        pip install Pillow
 
+### Tutorial to annotate an video
+
+- Video: https://youtu.be/YWhyuafnATI
+
        
 # TIP
 
@@ -99,12 +103,6 @@ Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
        
        `python .\360RAT.py`
        
-
-### Tutorial to annotate an video
-
-- Video: https://youtu.be/YWhyuafnATI
-
-
 
 # Output Data of Software
 A folder with :

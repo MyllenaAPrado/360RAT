@@ -18,11 +18,7 @@
 
 # Requisites
 
-* [Python 3.9.5](https://www.python.org/)
-
-* [Pip 21.2.4](https://pypi.org/project/pip/)
-
-  (Install pip together with python.)
+* [Python 3.9.5](https://www.python.org/) & [Pip 21.2.4](https://pypi.org/project/pip/)
 
 * [OpenCV 4.5.2](https://pypi.org/project/opencv-python/)
 
@@ -48,19 +44,7 @@
 
 Below are instructions to download and use the software. 
 
-## Download and Install:
-
-- Download the software from this gihub;
-
-- After installing, go to program folder:
-
-       `cd 360RAT`
-
-- Execute the program:
-
-       `python .\360RAT.py`
-
-## Virtual Machine:
+## Using Virtual Machine:
 
 1. Download the virtual machine from : [Link to dowload] (https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
 
@@ -82,6 +66,18 @@ Below are instructions to download and use the software.
 
 7. Execute the program:
        
+       `python .\360RAT.py`
+       
+## Direct Download:
+
+- Download the software from this gihub;
+
+- Go to program folder:
+
+       `cd 360RAT`
+
+- Execute the program:
+
        `python .\360RAT.py`
        
 ## Video Tutorial on "How to annotate a video":

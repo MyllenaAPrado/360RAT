@@ -3,8 +3,8 @@
 
 ![Image](./Images/PrincipalWindow.PNG?raw=true)
 
-* Tool to annotate spatially regions of interest for omnidirectional visual data in EPR.
-* Developed using [Equirectangular-toolbox](https://github.com/NitishMutha/equirectangular-toolbox), [OpenCV](https://pypi.org/project/opencv-python/), [PyQt5 5.15.4](https://pypi.org/project/PyQt5/), and [python 3.9.5](https://www.python.org/).
+* 360RAT is a tool to annotate spatially regions of interest (ROIs) in omnidirectional videos.
+* It was developed using [Equirectangular-toolbox](https://github.com/NitishMutha/equirectangular-toolbox), [OpenCV](https://pypi.org/project/opencv-python/), [PyQt5 5.15.4](https://pypi.org/project/PyQt5/), and [python 3.9.5](https://www.python.org/).
 
 * If you use this software in your project, please site the repository:
 
@@ -45,6 +45,8 @@
        pip install Pillow
        
 # Instructions
+
+Below are isntructions to download and use the software. 
 
 ## Download and Install:
 
@@ -110,7 +112,7 @@ The software outputs a folder with :
 | ROI H              | Horizontal ROI scale                                                         | Ranging from 0 to 1. (Only present for type =2 otherwise equal 0)|
 | ROI W              | Vertical ROI scale                                                           | Ranging from 0 to 1.(Only present for type =2 otherwise equal 0) |
 
-# TIPS
+# Tips 
 
 To decrease the fps or cut the videos you can use [FFMPEG 4.4](https://www.ffmpeg.org/download.html)
 

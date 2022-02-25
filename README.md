@@ -44,7 +44,7 @@
        
 ## Deploying the Virtual Machine to Run the Software:
 
-1. Download the virtual machine from : [Link to dowload](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
+1. Download the virtual machine from  [HERE](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
 
 2. Upload the file to the VirtualBox. ([for help, click here.](https://www.alphr.com/ova-virtualbox/))
 

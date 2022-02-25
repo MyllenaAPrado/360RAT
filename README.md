@@ -120,6 +120,7 @@ We have included a dataset of annotations performed in a experiments. The annota
 
 We have placed 2 of the original videos in folder XX. Below is a table with the links to the original videos found in this paper. 
 
+|        Field       |                                     Description                                     | Options                                                                                                                                                     |
 | Group |Video Name| Dataset| Resolution| Frame Rate| Interval (60s)| 
 | 1 |  Ben-Hur Chariot Race  | UTD [dataset]  | 4320×2160  | 24  | 0:00-1:00 | 
 | 1 | Closet Set Tour  | UTD [dataset]  | 4320×2160 | 29 | 0:07-1:07 | 

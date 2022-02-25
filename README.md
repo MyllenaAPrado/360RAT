@@ -135,7 +135,9 @@ The software outputs a folder with :
 | 2 | Park | Brasília 360 [3] | 4320×2160 | 30 | 0:00-00:30 | 
 
 [1] Afshin  Taghavi,  Aliehsan  Samiei,  Anahita  Mahzari,  Ryan  McMahan,  RaviPrakash, Mylene Farias, and Marcelo Carvalho. 2019. A taxonomy and datasetfor 360°videos. 273–278.  https://doi.org/10.1145/3304109.33258127
+
 [2] Sebastian Knorr, Cagri Ozcinar, Colm O Fearghail, and Aljosa Smolic. 2018.Director’s cut: a combined dataset for visual attention analysis in cinematicVR content. InProceedings of the 15th ACM SIGGRAPH European Conference onVisual Media Production. 1–10.
+
 [3] Brasília 360-graus: http://caixotexr.com/projects/brasilia-360/steps. 
 
 
@@ -145,14 +147,14 @@ To decrease the fps or cut the videos you can use [FFMPEG 4.4](https://www.ffmpe
 
 Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
 
-* Change the fps:
+* To change the fps:
 
        ffmpeg -i <input> -filter:v fps=30 <output>
 
-* Cut the video:
+* CTo cut the video:
 
        ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
 
-* Change the resolution:
+* To change the resolution:
 
        ffmpeg -i input.mp4 -vf scale=480:320 output_320.mp4

@@ -116,7 +116,7 @@ The software outputs a folder with :
 
 # Dataset
 
-- We have included a dataset of ROI annotations gathered from a subjective experiment. In this experiment, 9 participants rated 11 videos. The table below shows details about these videos, including the references of the original datasets or sources of these videos.   
+- We have included a dataset of ROI annotations gathered in a subjective experiment. In this experiment, 9 participants rated 11 videos. The table below shows details about the 360-degree videos used in this experiment, including their spatial and temporal resolution  and the original datasets or sources.   
 - All ROI annotations are stored in the cvs files located in the filesCSV folder (https://github.com/MyllenaAPrado/360RAT/tree/main/filesCSV). They include the ROI sizes and positions for all the frames of the 11 videos (see table below) and their semantic classification. 
 - We have also placed 2 of the original videos in the samples folder (https://github.com/MyllenaAPrado/360RAT/tree/main/samples). 
 

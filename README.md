@@ -50,7 +50,9 @@ Below are isntructions to download and use the software.
 
 ## Download and Install:
 
-- After installing, go to prorgram folder:
+- Download the software from this gihub;
+
+- After installing, go to program folder:
 
        `cd 360RAT`
 

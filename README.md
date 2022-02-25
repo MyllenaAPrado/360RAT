@@ -70,8 +70,8 @@
    e.g. `cd C:\Users\IEUser\Desktop\360rat`
 
 7. Run the program.
-       
-       python .\360RAT.py
+
+   python .\360RAT.py
        
 ## Direct Download:
 

@@ -45,7 +45,12 @@
        
 ## Deploying the Virtual Machine to Run the Software:
 
-1. Download the virtual machine from  [HERE](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef).
+1. Download the virtual machine: 
+  
+- OVA: [SharePoint](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef), [Dropbox](https://www.dropbox.com/s/w7jxllv7yz5pgw9/SW360RAT.ova?dl=0)
+- VHDX: [SharePoint](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EeyJwijN6BxBmZF3t5bDjqEBajSgHWvSaY_AE7pl7eHR-w?e=NLar9i), [Dropbox](https://www.dropbox.com/s/215sdswerzkk4y5/SW360RATVHDX.vhdx?dl=0)
+- VHD: [SharePoint](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EZBL3iwLeeFEnEbrMZ9MDQABZHXSDIB-1NFM9g5kh3kNQQ?e=WHDBPU), [Dropbox](https://www.dropbox.com/s/4bwcivnjfj46sr0/SW360RATVHD.vhd?dl=0)
+
 
 2. Upload the file to the VirtualBox. ([for help, click here.](https://www.alphr.com/ova-virtualbox/))
 

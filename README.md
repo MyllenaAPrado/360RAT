@@ -25,23 +25,23 @@
 
 * [OpenCV 4.5.2](https://pypi.org/project/opencv-python/)
 
-pip install opencv-python-headless
+  pip install opencv-python-headless
        
 * [PyQt5 5.15.4](https://pypi.org/project/PyQt5/)
 
-pip install PyQt5      
+  pip install PyQt5      
 
 * [Matplotlib](https://matplotlib.org/stable/users/installing.html)
 
-pip install -U matplotlib
+  pip install -U matplotlib
 
 * [Numpy](https://numpy.org/install/)
 
-pip install numpy
+  pip install numpy
 
 * [Pillow](https://pypi.org/project/Pillow/)
 
-pip install Pillow
+  pip install Pillow
        
 ## Deploying the Virtual Machine to Run the Software:
 

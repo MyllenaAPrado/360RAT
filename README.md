@@ -46,7 +46,7 @@
        
 # Instructions
 
-Below are isntructions to download and use the software. 
+Below are instructions to download and use the software. 
 
 ## Download and Install:
 
@@ -62,7 +62,7 @@ Below are isntructions to download and use the software.
 
 ## Virtual Machine:
 
-1. Dowloand the virtual machine from : [Link to dowload](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
+1. Download the virtual machine from : [Link to dowload] (https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
 
 2. Upload the file on virtual box ([link to help upload a .ova file on virtual box](https://www.alphr.com/ova-virtualbox/))
 
@@ -116,24 +116,28 @@ The software outputs a folder with :
 
 # Dataset
 
-We have included a dataset of annotations performed in a experiments. The annotations, which include the ROI sizes and positions for all the frames of all the videos and their semantic classification, are included in the cvs files located in XX folder. 
-
-We have placed 2 of the original videos in folder XX. Below is a table with the links to the original videos found in this paper. 
+- We have included a dataset of annotations performed in a experiments. The annotations are included in the cvs files located in the filesCSV folder (https://github.com/MyllenaAPrado/360RAT/tree/main/filesCSV). They include the ROI sizes and positions for all the frames of all the videos and their semantic classification. 
+- We have also placed 2 of the original videos in the samples folder (https://github.com/MyllenaAPrado/360RAT/tree/main/samples). Below is a table with the links to the original videos found in this paper. 
 
 
 | Group | Video Name | Dataset | Resolution | Frame Rate | Interval (60s) |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| 1 |  Ben-Hur Chariot Race  | UTD [dataset]  | 4320×2160  | 24  | 0:00-1:00 | 
-| 1 | Closet Set Tour  | UTD [dataset]  | 4320×2160 | 29 | 0:07-1:07 | 
-| 1 | FPV Race Drone Car Chase | UTD [dataset] | 4320×2160 | 29 | 2:11-3:11 | 
-| 1 | New York City Drive | UTD [dataset] | 4320×2160 | 30 | 0:12-1:12 | 
-| 1 | UTD Campus walk | UTD [dataset] | 4320×2160 | 29 | 0:00-1:00 | 
-| 1 | Wingsuit over Dubai | UTD [dataset] | 4320×2160 | 29 | 0:00-1:00 | 
-| 2 | Dubstep Dance | UTD [dataset] | 4320×2160 | 29 | 0:00-00:30 | 
-| 2 | Blue Angels Jets | UTD [dataset] | 4320×2160 | 29 | 1:00-01:30 | 
-| 2 | Partnership India | V-Sense [knorr2018director] | 4320×2160 | 30 | 1:41-02:11 | 
-| 2 | Amizade | Brasília 360 | 4320×2160 | 30 | 0:42-01:12 | 
-| 2 | Park | Brasília 360 | 4320×2160 | 30 | 0:00-00:30 | 
+| 1 |  Ben-Hur Chariot Race  | UTD [1]  | 4320×2160  | 24  | 0:00-1:00 | 
+| 1 | Closet Set Tour  | UTD [1]   | 4320×2160 | 29 | 0:07-1:07 | 
+| 1 | FPV Race Drone Car Chase | UTD [1]  | 4320×2160 | 29 | 2:11-3:11 | 
+| 1 | New York City Drive | UTD [1]  | 4320×2160 | 30 | 0:12-1:12 | 
+| 1 | UTD Campus walk | UTD [1]  | 4320×2160 | 29 | 0:00-1:00 | 
+| 1 | Wingsuit over Dubai | UTD [1]  | 4320×2160 | 29 | 0:00-1:00 | 
+| 2 | Dubstep Dance | UTD [1]  | 4320×2160 | 29 | 0:00-00:30 | 
+| 2 | Blue Angels Jets | UTD [1]  | 4320×2160 | 29 | 1:00-01:30 | 
+| 2 | Partnership India | V-Sense [2] | 4320×2160 | 30 | 1:41-02:11 | 
+| 2 | Amizade | Brasília 360 [3] | 4320×2160 | 30 | 0:42-01:12 | 
+| 2 | Park | Brasília 360 [3] | 4320×2160 | 30 | 0:00-00:30 | 
+
+[1] Afshin  Taghavi,  Aliehsan  Samiei,  Anahita  Mahzari,  Ryan  McMahan,  RaviPrakash, Mylene Farias, and Marcelo Carvalho. 2019. A taxonomy and datasetfor 360°videos. 273–278.  https://doi.org/10.1145/3304109.33258127
+[2] Sebastian Knorr, Cagri Ozcinar, Colm O Fearghail, and Aljosa Smolic. 2018.Director’s cut: a combined dataset for visual attention analysis in cinematicVR content. InProceedings of the 15th ACM SIGGRAPH European Conference onVisual Media Production. 1–10.
+[3] Brasília 360-graus: http://caixotexr.com/projects/brasilia-360/steps. 
+
 
 # Tips 
 

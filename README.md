@@ -5,6 +5,7 @@
 
 * 360RAT is a tool to annotate regions of interest (ROIs) in omnidirectional videos.
 * It was developed using [Equirectangular-toolbox](https://github.com/NitishMutha/equirectangular-toolbox), [OpenCV](https://pypi.org/project/opencv-python/), [PyQt5 5.15.4](https://pypi.org/project/PyQt5/), and [python 3.9.5](https://www.python.org/).
+* Video Tutorial on "How to annotate a video": https://youtu.be/YWhyuafnATI
 
 * If you use this software in your project, please cite this repository:
 
@@ -44,43 +45,37 @@
        
 ## Deploying the Virtual Machine to Run the Software:
 
-1. Download the virtual machine from  [HERE](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
+1. Download the virtual machine from  [HERE](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef).
 
 2. Upload the file to the VirtualBox. ([for help, click here.](https://www.alphr.com/ova-virtualbox/))
 
 3. Start the Virtual Machine.
 
-4. Enter
+4. Enter username and password, as follows. 
 
-   User: IEUser
+   username: IEUser
    
    password: Passw0rd!
 
-5. Open powerShell
+5. Open powerShell.
 
-6. Go to directory of program with the command:
+6. Go to the folder containing the program.
 
-       `cd C:\Users\IEUser\Desktop\360rat`
+       e.g. `cd C:\Users\IEUser\Desktop\360rat`
 
-7. Execute the program:
+7. Run the program.
        
        `python .\360RAT.py`
        
 ## Direct Download:
 
-- Download the software from this gihub;
+1. Download the software from this gihub.
 
-- Go to program folder:
+2. Go to program folder.
 
-       `cd 360RAT`
-
-- Execute the program:
+3. Run the program.
 
        `python .\360RAT.py`
-       
-## Video Tutorial on "How to annotate a video":
-
-- Video: https://youtu.be/YWhyuafnATI
 
 ## Output:
 

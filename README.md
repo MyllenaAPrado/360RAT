@@ -18,7 +18,7 @@
        
 # Instructions
 
-Below are instructions to download and use the software. 
+
 
 ## Requirements
 
@@ -44,9 +44,9 @@ Below are instructions to download and use the software.
 
        pip install Pillow
        
-## Using Virtual Machine:
+## Deploying the Virtual Machine to Run the Software:
 
-1. Download the virtual machine from : [Link to dowload] (https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
+1. Download the virtual machine from : [Link to dowload](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
 
 2. Upload the file on virtual box ([link to help upload a .ova file on virtual box](https://www.alphr.com/ova-virtualbox/))
 

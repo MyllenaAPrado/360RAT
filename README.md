@@ -44,25 +44,6 @@
 
        pip install Pillow
        
-# TIP
-
-To decrease the fps or cut the videos you can use [FFMPEG 4.4](https://www.ffmpeg.org/download.html)
-
-Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
-
-* Change the fps:
-
-       ffmpeg -i <input> -filter:v fps=30 <output>
-
-* Cut the video:
-
-       ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
-
-* Change the resolution:
-
-       ffmpeg -i input.mp4 -vf scale=480:320 output_320.mp4
-
-
 # Instructions
 
 ## Download and install from this repository:
@@ -127,3 +108,21 @@ The software outputs a folder with :
 | Center_point_end Y | 𝑦 coordinate in the picture frame corresponding to the center of the ROI     | Ranging from 0 to 1. (Only present for type =2 otherwise equal 0)                                                                                           |
 | ROI H              | Horizontal ROI scale                                                         | Ranging from 0 to 1. (Only present for type =2 otherwise equal 0)|
 | ROI W              | Vertical ROI scale                                                           | Ranging from 0 to 1.(Only present for type =2 otherwise equal 0) |
+
+# TIPS
+
+To decrease the fps or cut the videos you can use [FFMPEG 4.4](https://www.ffmpeg.org/download.html)
+
+Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
+
+* Change the fps:
+
+       ffmpeg -i <input> -filter:v fps=30 <output>
+
+* Cut the video:
+
+       ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
+
+* Change the resolution:
+
+       ffmpeg -i input.mp4 -vf scale=480:320 output_320.mp4

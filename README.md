@@ -3,10 +3,10 @@
 
 ![Image](./Images/PrincipalWindow.PNG?raw=true)
 
-* 360RAT is a tool to annotate spatially regions of interest (ROIs) in omnidirectional videos.
+* 360RAT is a tool to annotate regions of interest (ROIs) in omnidirectional videos.
 * It was developed using [Equirectangular-toolbox](https://github.com/NitishMutha/equirectangular-toolbox), [OpenCV](https://pypi.org/project/opencv-python/), [PyQt5 5.15.4](https://pypi.org/project/PyQt5/), and [python 3.9.5](https://www.python.org/).
 
-* If you use this software in your project, please site the repository:
+* If you use this software in your project, please cite this repository:
 
        @software{360RAT,
        author = {Myllena Prado, Lucas Althoff, and Mylène Farias},
@@ -15,8 +15,12 @@
        version = {0.1.0},
        year = {2021},
        }
+       
+# Instructions
 
-# Requisites
+Below are instructions to download and use the software. 
+
+## Requirements
 
 * [Python 3.9.5](https://www.python.org/) & [Pip 21.2.4](https://pypi.org/project/pip/)
 
@@ -40,10 +44,6 @@
 
        pip install Pillow
        
-# Instructions
-
-Below are instructions to download and use the software. 
-
 ## Using Virtual Machine:
 
 1. Download the virtual machine from : [Link to dowload] (https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)

@@ -46,7 +46,7 @@
        
 # Instructions
 
-## Download and install from this repository:
+## Download and Install:
 
 - After installing, go to prorgram folder:
 
@@ -56,7 +56,7 @@
 
        `python .\360RAT.py`
 
-## Virtual Machine with the software
+## Virtual Machine:
 
 1. Dowloand the virtual machine from : [Link to dowload](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
 
@@ -79,11 +79,11 @@
        
        `python .\360RAT.py`
        
-## Video Tutorial on How to annotate a video
+## Video Tutorial on "How to annotate a video":
 
 - Video: https://youtu.be/YWhyuafnATI
 
-## Output
+## Output:
 
 The software outputs a folder with :
 

@@ -114,6 +114,25 @@ The software outputs a folder with :
 | ROI H              | Horizontal ROI scale                                                         | Ranging from 0 to 1. (Only present for type =2 otherwise equal 0)|
 | ROI W              | Vertical ROI scale                                                           | Ranging from 0 to 1.(Only present for type =2 otherwise equal 0) |
 
+# Dataset
+
+We have included a dataset of annotations performed in a experiments. The annotations, which include the ROI sizes and positions for all the frames of all the videos and their semantic classification, are included in the cvs files located in XX folder. 
+
+We have placed 2 of the original videos in folder XX. Below is a table with the links to the original videos found in this paper. 
+
+| Group |Video Name| Dataset| Resolution| Frame Rate| Interval (60s)| 
+| 1 |  Ben-Hur Chariot Race  | UTD [dataset]  | 4320×2160  | 24  | 0:00-1:00 | 
+| 1 | Closet Set Tour  | UTD [dataset]  | 4320×2160 | 29 | 0:07-1:07 | 
+| 1 | FPV Race Drone Car Chase | UTD [dataset] | 4320×2160 | 29 | 2:11-3:11 | 
+| 1 | New York City Drive | UTD [dataset] | 4320×2160 | 30 | 0:12-1:12 | 
+| 1 | UTD Campus walk | UTD [dataset] | 4320×2160 | 29 | 0:00-1:00 | 
+| 1 | Wingsuit over Dubai | UTD [dataset] | 4320×2160 | 29 | 0:00-1:00 | 
+| 2 | Dubstep Dance | UTD [dataset] | 4320×2160 | 29 | 0:00-00:30 | 
+| 2 | Blue Angels Jets | UTD [dataset] | 4320×2160 | 29 | 1:00-01:30 | 
+| 2 | Partnership India | V-Sense [knorr2018director] | 4320×2160 | 30 | 1:41-02:11 | 
+| 2 | Amizade | Brasília 360 | 4320×2160 | 30 | 0:42-01:12 | 
+| 2 | Park | Brasília 360 | 4320×2160 | 30 | 0:00-00:30 | 
+
 # Tips 
 
 To decrease the fps or cut the videos you can use [FFMPEG 4.4](https://www.ffmpeg.org/download.html)

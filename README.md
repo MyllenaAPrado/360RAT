@@ -74,13 +74,23 @@
        
 ## Direct Download:
 
-1. Download the software from this gihub.
+1. Intall [Python 3.9.5](https://www.python.org/) & [Pip 21.2.4](https://pypi.org/project/pip/)
+ 
+2. Download the software from this gihub.
+       
+       git clone https://github.com/MyllenaAPrado/360RAT.git
+       
+3. Go to the program folder.
+       
+       cd \360rat  
 
-2. Go to the program folder.
+4. Install requirements:
+       
+       pip install -r requirements.txt
+       
+5. Run the program.
 
-3. Run the program.
-
-       `python .\360RAT.py`
+       python .\360RAT.py
 
 ## Output:
 

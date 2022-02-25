@@ -70,7 +70,7 @@
 
 7. Run the program.
        
-       `python .\360RAT.py`
+       python .\360RAT.py
        
 ## Direct Download:
 
@@ -101,8 +101,6 @@ The software outputs a folder with :
 - Video frames with annotated ROIs drawn over original content;
 - CSV file with annotation data, with the following fields.
 
-(Examples of foler output are located in the [`Dataset' folder](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset))
-
 |        Field       |                                     Description                                     | Options                                                                                                                                                     |
 |:------------------:|:----------------------------------------------------------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |        Type        |                                       Represent the type os ROI saved in csv | 0 - Representing that row is a "Single ROI".  1- Representing one ROI which is part of "compose ROI".  2 - Representing that row is a complete "compose ROI" |
@@ -120,6 +118,8 @@ The software outputs a folder with :
 | ROI H              | Horizontal ROI scale                                                         | Ranging from 0 to 1. (Only present for type =2 otherwise equal 0)|
 | ROI W              | Vertical ROI scale                                                           | Ranging from 0 to 1.(Only present for type =2 otherwise equal 0) |
 
+* Examples of complete output folder are located in the [`completeOutputSampleAnnotation folder'](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset/completeOutputSampleAnnotation). 
+
 # Dataset
 
 - We have included a dataset of ROI annotations gathered in a subjective experiment. In this experiment, 9 participants rated 11 videos. The table below shows details about the 360-degree videos used in this experiment, including their spatial and temporal resolution  and the original datasets or sources. 
@@ -128,7 +128,7 @@ The software outputs a folder with :
 
 - We have also placed 2 of the original videos in the [`sampleVideos' folder](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset/sampleVideos).
 
-- In the folder [`sampleAnnotatedVideos' folder](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset/sampleAnnotatedVideos) is stored videos that show examples of annotations done for all annotators. These videos has 5FPS and all frames have one ROI annotated.
+- We provied videos that show annotations of videos "Amizade" and "Park" for all participants in the [`sampleAnnotatedVideos' folder](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset/sampleAnnotatedVideos).
 
 | Group | Video Name | Dataset | Resolution | Frame Rate | Interval (60s) |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |

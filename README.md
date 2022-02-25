@@ -93,7 +93,7 @@ The software outputs a folder with :
 - Video frames with annotated ROIs drawn over original content;
 - CSV file with annotation data. This file can be used to later edit a video annotation. This CSV has the follow fields:
 
-|        Field       |                                     Description                                     | options                                                                                                                                                     |
+|        Field       |                                     Description                                     | Options                                                                                                                                                     |
 |:------------------:|:----------------------------------------------------------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |        Type        |                                       Represent the type os ROI saved in csv | 0 - Representing that row is a "Single ROI".  1- Representing one ROI which is part of "compose ROI".  2 - Representing that row is a complete "compose ROI" |
 |        Frame       |                                              frame position during the video | Number from 0 to total frame of video                                                                                                                       |

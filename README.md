@@ -45,11 +45,12 @@
        
 ## Deploying the Virtual Machine to Run the Software:
 
-1. Download the virtual machine: 
+1. Download the virtual machine (Folder content: 
   
 - OVA: [SharePoint](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef) 
 - VHDX: [SharePoint](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EeyJwijN6BxBmZF3t5bDjqEBajSgHWvSaY_AE7pl7eHR-w?e=NLar9i)
 - VHD: [SharePoint](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EZBL3iwLeeFEnEbrMZ9MDQABZHXSDIB-1NFM9g5kh3kNQQ?e=WHDBPU)
+- [Folders containing all VM versions](https://www.dropbox.com/sh/91j1mr17vmkntyq/AACjS2fVofdZCFi6qyUD8fuWa?dl=0) 
 
 
 2. Upload the file to the VirtualBox. ([for help, click here.](https://www.alphr.com/ova-virtualbox/))

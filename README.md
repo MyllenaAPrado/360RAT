@@ -134,13 +134,11 @@ The software outputs a folder with :
 
 To decrease the fps or cut the videos you can use [FFMPEG 4.4](https://www.ffmpeg.org/download.html)
 
-Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
-
 * To change the fps:
 
        ffmpeg -i <input> -filter:v fps=30 <output>
 
-* CTo cut the video:
+* To cut the video:
 
        ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
 

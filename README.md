@@ -67,7 +67,7 @@
 
 6. Go to the folder containing the program.
 
-       e.g. `cd C:\Users\IEUser\Desktop\360rat`
+   e.g. `cd C:\Users\IEUser\Desktop\360rat`
 
 7. Run the program.
        
@@ -78,20 +78,20 @@
 1. Intall [Python 3.9.5](https://www.python.org/) & [Pip 21.2.4](https://pypi.org/project/pip/)
  
 2. Download the software from this gihub.
-       
-       git clone https://github.com/MyllenaAPrado/360RAT.git
+
+   git clone https://github.com/MyllenaAPrado/360RAT.git
        
 3. Go to the program folder.
-       
-       cd \360rat  
 
-4. Install requirements:
-       
-       pip install -r requirements.txt
+   cd \360rat  
+
+4. Install requirements: 
+   
+   pip install -r requirements.txt
        
 5. Run the program.
 
-       python .\360RAT.py
+   python .\360RAT.py
 
 ## Output:
 

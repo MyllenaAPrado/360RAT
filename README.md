@@ -1,4 +1,4 @@
-# <img src="./Images/360RAT_logo.png" alt="drawing" width="100"/> 360RAT - 360 - ROI Annotator Tool
+# <img src="./Images/360RAT_logo.png" alt="drawing" width="100"/> 360RAT: 360 - ROI Annotator Tool
 
 
 ![Image](./Images/PrincipalWindow.PNG?raw=true)
@@ -9,8 +9,8 @@
 * If you use this software in your project, please site the repository:
 
        @software{360RAT,
-       author = {Mylène Farias, Myllena Prado and Lucas Althoff},
-       title = {360RAT - 360 - ROI Annotator Tool},
+       author = {Myllena Prado, Lucas Althoff, and Mylène Farias},
+       title = {360RAT: 360 - ROI Annotator Tool},
        url = {https://gitlab.com/gpds-unb/360rat},
        version = {0.1.0},
        year = {2021},
@@ -43,7 +43,6 @@
 * [Pillow](https://pypi.org/project/Pillow/)
 
        pip install Pillow
-
        
 # TIP
 
@@ -64,11 +63,11 @@ Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
        ffmpeg -i input.mp4 -vf scale=480:320 output_320.mp4
 
 
-# Use operation
+# Instructions
 
 ## Download and install from this repository:
 
-- After install go to directory of program:
+- After installing, go to prorgram folder:
 
        `cd 360RAT`
 
@@ -76,16 +75,16 @@ Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
 
        `python .\360RAT.py`
 
-
 ## Virtual Machine with the software
 
 1. Dowloand the virtual machine from : [Link to dowload](https://unbbr-my.sharepoint.com/:u:/g/personal/150081197_aluno_unb_br/EWV6dV8g0gRPtMPnkp0_gegBQSGS0vAuDzrFft6N1N-f6g?e=C3jEef)
 
 2. Upload the file on virtual box ([link to help upload a .ova file on virtual box](https://www.alphr.com/ova-virtualbox/))
 
-3. Start Virtual Machine.
+3. Start the Virtual Machine.
 
-4. Enter:
+4. Enter
+
    User: IEUser
    password: Passw0rd!
 
@@ -99,22 +98,20 @@ Full release : https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
        
        `python .\360RAT.py`
        
-
-### Tutorial to annotate an video
+## Video Tutorial on How to annotate a video
 
 - Video: https://youtu.be/YWhyuafnATI
 
+## Output
 
+The software outputs a folder with :
 
-# Output Data of Software
-A folder with :
+- Annotated frames;
+- Black frames with ROIs shown in white;
+- Video frames with annotated ROIs drawn over original content;
+- CSV file with annotation data. This file can be used to later edit a video annotation. This CSV has the follow fields:
 
-- All frames annotated
-- All frames in black with ROI annottated draw in white.
-- A video with the ROIs annotated draw on frames.
-- CSV with properties of annotations that can be upload in program to edit the annotation done before. This CSV has the follow proprierties:
-
-|        Field       |                                     mean                                     | options                                                                                                                                                     |
+|        Field       |                                     Description                                     | options                                                                                                                                                     |
 |:------------------:|:----------------------------------------------------------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |        Type        |                                       Represent the type os ROI saved in csv | 0 - Representing that row is a "Single ROI".  1- Representing one ROI which is part of "compose ROI".  2 - Representing that row is a complete "compose ROI" |
 |        Frame       |                                              frame position during the video | Number from 0 to total frame of video                                                                                                                       |

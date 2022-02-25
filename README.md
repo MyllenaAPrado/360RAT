@@ -4,6 +4,7 @@
 ![Image](./Images/PrincipalWindow.PNG?raw=true)
 
 * 360RAT is a tool to annotate regions of interest (ROIs) in omnidirectional videos.
+* Link to the official repository on GitLab: [360RAT - Lab GPDS](https://gitlab.com/gpds-unb/360rat). 
 * It was developed using [Equirectangular-toolbox](https://github.com/NitishMutha/equirectangular-toolbox), [OpenCV](https://pypi.org/project/opencv-python/), [PyQt5 5.15.4](https://pypi.org/project/PyQt5/), and [python 3.9.5](https://www.python.org/).
 * Video Tutorial on  ["How to annotate a 360-degree video using 360RAT"](https://youtu.be/YWhyuafnATI)
 
@@ -66,31 +67,31 @@
 
 6. Go to the folder containing the program.
 
-       e.g. `cd C:\Users\IEUser\Desktop\360rat`
+   e.g. `cd C:\Users\IEUser\Desktop\360rat`
 
 7. Run the program.
-       
-       python .\360RAT.py
+
+   python .\360RAT.py
        
 ## Direct Download:
 
 1. Intall [Python 3.9.5](https://www.python.org/) & [Pip 21.2.4](https://pypi.org/project/pip/)
  
 2. Download the software from this gihub.
-       
-       git clone https://github.com/MyllenaAPrado/360RAT.git
+
+   git clone https://github.com/MyllenaAPrado/360RAT.git
        
 3. Go to the program folder.
-       
-       cd \360rat  
 
-4. Install requirements:
-       
-       pip install -r requirements.txt
+   cd \360rat  
+
+4. Install requirements: 
+   
+   pip install -r requirements.txt
        
 5. Run the program.
 
-       python .\360RAT.py
+   python .\360RAT.py
 
 ## Output:
 
@@ -122,13 +123,14 @@ The software outputs a folder with :
 
 # Dataset
 
-- We have included a dataset of ROI annotations gathered in a subjective experiment. In this experiment, 9 participants rated 11 videos. The table below shows details about the 360-degree videos used in this experiment, including their spatial and temporal resolution  and the original datasets or sources. 
+- We have included a dataset of ROI annotations gathered in a subjective experiment (see [Dataset](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset) folder). In this experiment, 9 participants rated 11 videos. The table below shows details about the 360-degree videos used in this experiment, including their spatial and temporal resolution  and the original datasets or sources. 
 
 - All ROI annotations are stored in the CSV files located in the [`filesCSV' folder](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset/filesCSV). They include the ROI sizes and positions for all the frames of the 11 videos (see table below) and their semantic classifications. 
 
 - We have also placed 2 of the original videos in the [`sampleVideos' folder](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset/sampleVideos).
 
-- We provied videos that show annotations of videos "Amizade" and "Park" for all participants in the [`sampleAnnotatedVideos' folder](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset/sampleAnnotatedVideos).
+- We also provided videos that show annotations of videos "Amizade" and "Park" for all participants in the [`sampleAnnotatedVideos' folder](https://github.com/MyllenaAPrado/360RAT/tree/main/Dataset/sampleAnnotatedVideos).
+
 
 | Group | Video Name | Dataset | Resolution | Frame Rate | Interval (60s) |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
